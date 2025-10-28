@@ -1,0 +1,40 @@
+0:02:42 Microsoft.Shutdown.TabStripModel.CloseAllTabs
+0:02:42 Microsoft.Shutdown.TabStripModel.CloseTabs
+0:02:42 Microsoft.Shutdown.TabStripModel.CloseTabs_EdgeBeforeClosingAllTabs
+0:02:42 Microsoft.Shutdown.TabStripModel.InternalCloseTabsImpl
+0:02:42 Microsoft.Shutdown.TabStripModel.InternalCloseTabsImpl_TabClosable
+0:02:42 Microsoft.Shutdown.TabStripModel.InternalCloseTabsImpl_ClosingAll
+0:02:42 Microsoft.Shutdown.TabStripModel.CloseWebContentses
+0:02:42 Microsoft.Shutdown.TabStripModel.CloseWebContentses_FastShutdown
+0:02:42 Microsoft.Shutdown.TabStripModel.ShouldRunUnloadListenerBeforeClosing_false
+0:02:42 Tab3 RenderProcessGone
+0:02:42 Microsoft.UnloadController.ClearUnloadState
+0:02:42 Microsoft.Shutdown.TabStripModel.RunUnloadListenerBeforeClosing_false
+0:02:42 Microsoft.Shutdown.TabStripModel.InternalCloseTabsImpl_ClosedAll
+0:02:42 Microsoft.Shutdown.TabStripModel.SendDetachWebContentsNotifications
+0:02:42 Microsoft.UnloadController.ClearUnloadState
+0:02:42 Browser3 Close Tab3 at 0
+0:02:42 Tab3 FinishNav212
+0:02:42 Tab3 WebContentsDestroyed
+0:02:42 Microsoft.UnloadController.TabStripEmpty
+0:02:42 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp
+0:02:42 Microsoft.UnloadController.HasCompletedUnloadProcessing_True
+0:02:42 Microsoft.Shutdown.OnWindowClosing
+0:02:42 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp
+0:02:42 Microsoft.UnloadController.HasCompletedUnloadProcessing_True
+0:02:42 Microsoft.Shutdown.OnWindowClosingPostClearBrowsingData_NoBrowsingDataCleared
+0:02:42 Widget Closed: BrowserFrame
+0:02:42 Microsoft.UnloadController.HasCompletedUnloadProcessing_True
+0:02:42 Microsoft.Shutdown.OnWindowClosing
+0:02:42 Microsoft.Shutdown.OnWindowClosing_DeleteScheduled
+0:02:42 Microsoft.Browser_Removed
+0:02:45 Tab1 StartNav213 #google #renderer-user #link
+0:02:45 Tab1 FinishNav213
+0:02:50 Tab1 StartNav214 #google #renderer-user #link
+0:02:50 Tab1 FinishNav214
+0:02:53 Tab1 StartNav215 #google #renderer-user #link
+0:02:53 Tab1 FinishNav215
+0:03:11 Tab1 StartNav216 #renderer-script #auto_subframe
+0:03:11 Tab1 FinishNav216
+0:03:11 Tab1 PageLoad
+0:03:13 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp

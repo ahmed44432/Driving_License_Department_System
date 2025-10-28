@@ -1,0 +1,20 @@
+2025/10/27-18:26:43.431 468 Reusing MANIFEST C:\Users\DELL\source\repos\DVLD\bin\Debug\DVLD.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2025/10/27-18:26:43.489 468 Recovering log #23
+2025/10/27-18:26:43.491 468 Level-0 table #26: started
+2025/10/27-18:26:43.511 468 Level-0 table #26: 86236 bytes OK
+2025/10/27-18:26:43.530 468 Delete type=0 #23
+2025/10/27-18:27:21.534 524 Level-0 table #29: started
+2025/10/27-18:27:21.553 524 Level-0 table #29: 53639 bytes OK
+2025/10/27-18:27:21.561 524 Delete type=0 #27
+2025/10/27-18:27:21.564 524 Compacting 4@0 + 1@1 files
+2025/10/27-18:27:21.595 524 Generated table #30@0: 138 keys, 60400 bytes
+2025/10/27-18:27:21.596 524 Compacted 4@0 + 1@1 files => 60400 bytes
+2025/10/27-18:27:21.605 524 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/10/27-18:27:21.607 524 Delete type=2 #18
+2025/10/27-18:27:21.608 524 Delete type=2 #21
+2025/10/27-18:27:21.608 524 Delete type=2 #24
+2025/10/27-18:27:21.608 524 Delete type=2 #26
+2025/10/27-18:27:21.608 524 Delete type=2 #29
+2025/10/27-18:28:51.780 524 Level-0 table #32: started
+2025/10/27-18:28:51.810 524 Level-0 table #32: 57776 bytes OK
+2025/10/27-18:28:51.817 524 Delete type=0 #28

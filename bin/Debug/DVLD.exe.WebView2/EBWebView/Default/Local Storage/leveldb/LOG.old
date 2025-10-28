@@ -1,0 +1,6 @@
+2025/10/26-20:56:53.372 84 Reusing MANIFEST C:\Users\DELL\source\repos\DVLD\bin\Debug\DVLD.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2025/10/26-20:56:53.410 84 Recovering log #20
+2025/10/26-20:56:53.421 84 Reusing old log C:\Users\DELL\source\repos\DVLD\bin\Debug\DVLD.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000020.log 
+2025/10/26-20:58:01.555 19b0 Level-0 table #24: started
+2025/10/26-20:58:01.581 19b0 Level-0 table #24: 72199 bytes OK
+2025/10/26-20:58:01.591 19b0 Delete type=0 #20
