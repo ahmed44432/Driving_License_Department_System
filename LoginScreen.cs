@@ -17,7 +17,7 @@ namespace DVLD
 
         private void LoginScreen_Load(object sender, EventArgs e)
         {
-
+            ReturnRecourd(path);
         }
 
         private void lnbMoreInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -29,7 +29,31 @@ namespace DVLD
         string path = @"C:\Users\DELL\source\repos\DVLD\UsersFastLogin";
         string line;
 
-        private void 
+        private void AddRecourdInFile(string path, string UN,string PS)
+        {
+            line = UN + "##" + PS;
+            File.Encrypt(path);
+            File.AppendAllText(path, line);
+            line = string.Empty;
+        }
+
+        private void ReturnRecourd(string path)
+        {
+            File.Decrypt(path);
+            line = File.ReadAllText(path);
+
+            if (line == string.Empty) { return; }
+
+            string[] info = new string[2];
+            info = line.Split(new string[] { "##" },StringSplitOptions.None);
+
+            txbUN.Text = info[0];
+            txbPS.Text = info[1];
+
+            File.WriteAllText(path, string.Empty);
+
+        }
+
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -41,13 +65,12 @@ namespace DVLD
                     MessageBox.Show("welcome :)");
                     if(chkRM.Checked)
                     {
-
-                        line = txbUN.Text + "##" + txbPS.Text;    
-                        File.AppendAllText(path,line);
-                          
-
+                        AddRecourdInFile(path, txbUN.Text, txbPS.Text); 
                     }
-
+                   
+                    MainForm main = new MainForm();
+                    main.Show();
+                    this.Close();
                 }
                 else
                 {
