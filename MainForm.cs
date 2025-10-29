@@ -16,5 +16,10 @@ namespace DVLD
         {
             InitializeComponent();
         }
+
+        private void tspmiPeople_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

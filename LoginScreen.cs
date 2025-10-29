@@ -13,6 +13,7 @@ namespace DVLD
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            chkRM.Checked = true;
         }
 
         private void LoginScreen_Load(object sender, EventArgs e)
@@ -67,10 +68,11 @@ namespace DVLD
                     {
                         AddRecourdInFile(path, txbUN.Text, txbPS.Text); 
                     }
-                   
-                    MainForm main = new MainForm();
-                    main.Show();
+                    this.DialogResult = DialogResult.OK;
                     this.Close();
+                    //MainForm main = new MainForm();
+                    //main.Show();
+                    //this.Hide();
                 }
                 else
                 {
