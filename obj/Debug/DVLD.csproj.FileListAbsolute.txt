@@ -26,3 +26,5 @@ C:\Users\DELL\source\repos\DVLD\bin\Debug\DataAccess.dll
 C:\Users\DELL\source\repos\DVLD\bin\Debug\DataAccess.pdb
 C:\Users\DELL\source\repos\DVLD\obj\Debug\DVLD.MainForm.resources
 C:\Users\DELL\source\repos\DVLD\obj\Debug\DVLD.MainRelatedForms.PeopleForm.resources
+C:\Users\DELL\source\repos\DVLD\obj\Debug\DVLD.AddingPerson.resources
+C:\Users\DELL\source\repos\DVLD\obj\Debug\DVLD.MainRelatedForms.AddEditPerson.resources

@@ -18,6 +18,7 @@ namespace DVLD
             Application.SetCompatibleTextRenderingDefault(false);
 
             LoginScreen loginScreen = new LoginScreen();
+            loginScreen.StartPosition = FormStartPosition.CenterScreen;
             if (loginScreen.ShowDialog() == DialogResult.OK)
             {
                 Application.Run(new MainForm());

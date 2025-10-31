@@ -17,5 +17,12 @@ namespace DVLD.MainRelatedForms
             dgvPeopleList.DataSource = clsPeapleBusinessLayer.GetAllPeople();
         }
 
+        private void btnADD_Click(object sender, EventArgs e)
+        {
+            AddEditPerson addEditPerson = new AddEditPerson();
+            addEditPerson.StartPosition = FormStartPosition.CenterScreen;
+            addEditPerson.AutoScaleMode = AutoScaleMode.None;
+            addEditPerson.ShowDialog();
+        }
     }
 }

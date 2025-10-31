@@ -82,6 +82,12 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainRelatedForms\AddEditPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainRelatedForms\AddEditPerson.Designer.cs">
+      <DependentUpon>AddEditPerson.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainRelatedForms\PeopleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainRelatedForms\AddEditPerson.resx">
+      <DependentUpon>AddEditPerson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainRelatedForms\PeopleForm.resx">
       <DependentUpon>PeopleForm.cs</DependentUpon>
@@ -134,6 +143,7 @@
       <Name>BusinessLayer</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Web.WebView2.1.0.3537.50\build\Microsoft.Web.WebView2.targets" Condition="Exists('packages\Microsoft.Web.WebView2.1.0.3537.50\build\Microsoft.Web.WebView2.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
