@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEditPerson));
             this.lbTitel = new System.Windows.Forms.Label();
             this.lb2 = new System.Windows.Forms.Label();
             this.lbID = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             this.addingPerson1 = new DVLD.AddingPerson();
             this.SuspendLayout();
             // 
@@ -65,26 +67,39 @@
             this.lbID.TabIndex = 3;
             this.lbID.Text = "N/A";
             // 
+            // btnClose
+            // 
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClose.Location = new System.Drawing.Point(675, 14);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(30, 29);
+            this.btnClose.TabIndex = 6;
+            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.button2_Click);
+            // 
             // addingPerson1
             // 
-            this.addingPerson1.Location = new System.Drawing.Point(3, 70);
+            this.addingPerson1.Location = new System.Drawing.Point(1, 70);
             this.addingPerson1.Name = "addingPerson1";
-            this.addingPerson1.Size = new System.Drawing.Size(701, 309);
-            this.addingPerson1.TabIndex = 4;
-            this.addingPerson1.Load += new System.EventHandler(this.addingPerson1_Load);
+            this.addingPerson1.Size = new System.Drawing.Size(714, 346);
+            this.addingPerson1.TabIndex = 7;
             // 
             // AddEditPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(717, 381);
+            this.ClientSize = new System.Drawing.Size(717, 407);
             this.Controls.Add(this.addingPerson1);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lbID);
             this.Controls.Add(this.lb2);
             this.Controls.Add(this.lbTitel);
             this.Name = "AddEditPerson";
             this.Text = "AddEditPerson";
+            this.Load += new System.EventHandler(this.AddEditPerson_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,6 +109,7 @@
         private System.Windows.Forms.Label lbTitel;
         private System.Windows.Forms.Label lb2;
         private System.Windows.Forms.Label lbID;
+        private System.Windows.Forms.Button btnClose;
         private AddingPerson addingPerson1;
     }
 }

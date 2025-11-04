@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer;
 
 namespace DVLD.MainRelatedForms
 {
@@ -15,11 +16,33 @@ namespace DVLD.MainRelatedForms
         public AddEditPerson()
         {
             InitializeComponent();
+            addingPerson1.OnPersonAdded += Person_DataBack;
         }
 
-        private void addingPerson1_Load(object sender, EventArgs e)
+        clsPeopleBusinessLayer Person_info;
+
+        private void Person_DataBack(clsPeopleBusinessLayer person)
+        {
+            Person_info = person;
+
+            if (Person_info.Save())
+                MessageBox.Show("Person saved successfully!");
+            else
+                MessageBox.Show("Failed to save person!");
+        }
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void AddEditPerson_Load(object sender, EventArgs e)
         {
 
+            MessageBox.Show("UserControl Loaded!");
         }
+
+      
     }
 }

@@ -3,44 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\source\\repos\\DVLD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9894179C-23F7-4B38-9A2E-D0CE9A22CC03}|..\\DataAccess\\DataAccess.csproj|c:\\users\\dell\\source\\repos\\dataaccess\\clspeapledataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AFF9C0FB-59EE-4E73-95AF-6CC6966AA3FE}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\users\\dell\\source\\repos\\businesslayer\\clspeaplebusinesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{747D2CA9-8EA3-41FD-8856-72A0D62788B1}|..\\TestInConsole\\TestInConsole.csproj|c:\\users\\dell\\source\\repos\\testinconsole\\testconsol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9894179C-23F7-4B38-9A2E-D0CE9A22CC03}|..\\DataAccess\\DataAccess.csproj|c:\\users\\dell\\source\\repos\\dataaccess\\clsuserdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|C:\\Users\\DELL\\source\\repos\\DVLD\\mainrelatedforms\\peopleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|solutionrelative:mainrelatedforms\\peopleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|C:\\Users\\DELL\\source\\repos\\DVLD\\mainrelatedforms\\addeditperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|c:\\users\\dell\\source\\repos\\dvld\\mainrelatedforms\\addeditperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|solutionrelative:mainrelatedforms\\addeditperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|C:\\Users\\DELL\\source\\repos\\DVLD\\mainrelatedforms\\addeditperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|solutionrelative:mainrelatedforms\\addeditperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|C:\\Users\\DELL\\source\\repos\\DVLD\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|C:\\Users\\DELL\\source\\repos\\DVLD\\mainrelatedforms\\peopleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|solutionrelative:mainrelatedforms\\peopleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|C:\\Users\\DELL\\source\\repos\\DVLD\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|C:\\Users\\DELL\\source\\repos\\DVLD\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|C:\\Users\\DELL\\source\\repos\\DVLD\\addingperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,6 +13,45 @@
     {
       "AbsoluteMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|C:\\Users\\DELL\\source\\repos\\DVLD\\addingperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|solutionrelative:addingperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|C:\\Users\\DELL\\source\\repos\\DVLD\\mainrelatedforms\\addeditperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|solutionrelative:mainrelatedforms\\addeditperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|C:\\Users\\DELL\\source\\repos\\DVLD\\mainrelatedforms\\peopleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|solutionrelative:mainrelatedforms\\peopleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|C:\\Users\\DELL\\source\\repos\\DVLD\\mainrelatedforms\\peopleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|solutionrelative:mainrelatedforms\\peopleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF9C0FB-59EE-4E73-95AF-6CC6966AA3FE}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\users\\dell\\source\\repos\\businesslayer\\clspeoplebusinesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF9C0FB-59EE-4E73-95AF-6CC6966AA3FE}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\users\\dell\\source\\repos\\businesslayer\\clscountriesbusinesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9894179C-23F7-4B38-9A2E-D0CE9A22CC03}|..\\DataAccess\\DataAccess.csproj|c:\\users\\dell\\source\\repos\\dataaccess\\clscountriesdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9894179C-23F7-4B38-9A2E-D0CE9A22CC03}|..\\DataAccess\\DataAccess.csproj|c:\\users\\dell\\source\\repos\\dataaccess\\clspeopledataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{747D2CA9-8EA3-41FD-8856-72A0D62788B1}|..\\TestInConsole\\TestInConsole.csproj|c:\\users\\dell\\source\\repos\\testinconsole\\testconsol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|C:\\Users\\DELL\\source\\repos\\DVLD\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|C:\\Users\\DELL\\source\\repos\\DVLD\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|C:\\Users\\DELL\\source\\repos\\DVLD\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83497F80-3FD3-487D-8A16-CACF09ABE205}|DVLD.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +61,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,79 +77,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AddingPerson.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DVLD\\AddingPerson.cs",
-              "RelativeDocumentMoniker": "AddingPerson.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DVLD\\AddingPerson.cs",
-              "RelativeToolTip": "AddingPerson.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAuwBIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "AddEditPerson.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DVLD\\MainRelatedForms\\AddEditPerson.cs",
+              "RelativeDocumentMoniker": "MainRelatedForms\\AddEditPerson.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DVLD\\MainRelatedForms\\AddEditPerson.cs*",
+              "RelativeToolTip": "MainRelatedForms\\AddEditPerson.cs*",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T18:28:42.623Z"
+              "WhenOpened": "2025-10-31T17:24:30.755Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 2,
               "Title": "AddingPerson.cs [Design]",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DVLD\\AddingPerson.cs",
               "RelativeDocumentMoniker": "AddingPerson.cs",
               "ToolTip": "C:\\Users\\DELL\\source\\repos\\DVLD\\AddingPerson.cs [Design]",
               "RelativeToolTip": "AddingPerson.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T17:09:22.85Z"
+              "WhenOpened": "2025-10-30T17:09:22.85Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PeopleForm.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DVLD\\MainRelatedForms\\PeopleForm.cs",
-              "RelativeDocumentMoniker": "MainRelatedForms\\PeopleForm.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DVLD\\MainRelatedForms\\PeopleForm.cs",
-              "RelativeToolTip": "MainRelatedForms\\PeopleForm.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBcAAAA9AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "AddingPerson.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DVLD\\AddingPerson.cs",
+              "RelativeDocumentMoniker": "AddingPerson.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DVLD\\AddingPerson.cs",
+              "RelativeToolTip": "AddingPerson.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAiwDMAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T14:30:10.481Z",
+              "WhenOpened": "2025-10-30T18:28:42.623Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "clsPeapleDataAccess.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DataAccess\\clsPeapleDataAccess.cs",
-              "RelativeDocumentMoniker": "..\\DataAccess\\clsPeapleDataAccess.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DataAccess\\clsPeapleDataAccess.cs*",
-              "RelativeToolTip": "..\\DataAccess\\clsPeapleDataAccess.cs*",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAowIIAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T21:03:56.311Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AddEditPerson.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DVLD\\MainRelatedForms\\AddEditPerson.cs",
-              "RelativeDocumentMoniker": "MainRelatedForms\\AddEditPerson.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DVLD\\MainRelatedForms\\AddEditPerson.cs [Design]",
-              "RelativeToolTip": "MainRelatedForms\\AddEditPerson.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T17:09:03.124Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "AddEditPerson.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DVLD\\MainRelatedForms\\AddEditPerson.cs",
-              "RelativeDocumentMoniker": "MainRelatedForms\\AddEditPerson.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DVLD\\MainRelatedForms\\AddEditPerson.cs",
-              "RelativeToolTip": "MainRelatedForms\\AddEditPerson.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAwwBUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T17:24:30.755Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "PeopleForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DVLD\\MainRelatedForms\\PeopleForm.cs",
               "RelativeDocumentMoniker": "MainRelatedForms\\PeopleForm.cs",
@@ -158,33 +127,103 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "clsPeapleBusinessLayer.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BusinessLayer\\clsPeapleBusinessLayer.cs",
-              "RelativeDocumentMoniker": "..\\BusinessLayer\\clsPeapleBusinessLayer.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BusinessLayer\\clsPeapleBusinessLayer.cs",
-              "RelativeToolTip": "..\\BusinessLayer\\clsPeapleBusinessLayer.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAQwAsAAAAPAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "PeopleForm.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DVLD\\MainRelatedForms\\PeopleForm.cs",
+              "RelativeDocumentMoniker": "MainRelatedForms\\PeopleForm.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DVLD\\MainRelatedForms\\PeopleForm.cs",
+              "RelativeToolTip": "MainRelatedForms\\PeopleForm.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T14:26:30.399Z",
+              "WhenOpened": "2025-10-30T14:30:10.481Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "clsUserDataAccess.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DataAccess\\clsUserDataAccess.cs",
-              "RelativeDocumentMoniker": "..\\DataAccess\\clsUserDataAccess.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DataAccess\\clsUserDataAccess.cs",
-              "RelativeToolTip": "..\\DataAccess\\clsUserDataAccess.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCAAAAAuAAAAAAAAAA==",
+              "Title": "AddEditPerson.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DVLD\\MainRelatedForms\\AddEditPerson.cs",
+              "RelativeDocumentMoniker": "MainRelatedForms\\AddEditPerson.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DVLD\\MainRelatedForms\\AddEditPerson.cs [Design]*",
+              "RelativeToolTip": "MainRelatedForms\\AddEditPerson.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T16:21:51.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T17:09:03.124Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "clsPeopleBusinessLayer.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BusinessLayer\\clsPeopleBusinessLayer.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\clsPeopleBusinessLayer.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BusinessLayer\\clsPeopleBusinessLayer.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\clsPeopleBusinessLayer.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAAAHYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T14:26:30.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "clsCountriesBusinessLayer.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\BusinessLayer\\clsCountriesBusinessLayer.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\clsCountriesBusinessLayer.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\BusinessLayer\\clsCountriesBusinessLayer.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\clsCountriesBusinessLayer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T19:01:00.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "clsCountriesDataAccess.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DataAccess\\clsCountriesDataAccess.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\clsCountriesDataAccess.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DataAccess\\clsCountriesDataAccess.cs",
+              "RelativeToolTip": "..\\DataAccess\\clsCountriesDataAccess.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T18:58:20.814Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "clsPeopleDataAccess.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DataAccess\\clsPeopleDataAccess.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\clsPeopleDataAccess.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DataAccess\\clsPeopleDataAccess.cs",
+              "RelativeToolTip": "..\\DataAccess\\clsPeopleDataAccess.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAswAwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T21:03:56.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "testConsol.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\TestInConsole\\testConsol.cs",
+              "RelativeDocumentMoniker": "..\\TestInConsole\\testConsol.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\TestInConsole\\testConsol.cs",
+              "RelativeToolTip": "..\\TestInConsole\\testConsol.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-26T17:08:47.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DVLD\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DVLD\\MainForm.cs [Design]",
+              "RelativeToolTip": "MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T18:42:27.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DVLD\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
@@ -196,7 +235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DVLD\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -205,30 +244,6 @@
               "ViewState": "AgIAAAoAAAAAAAAAAAAqwBgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-29T20:16:24.594Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DVLD\\MainForm.cs",
-              "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DVLD\\MainForm.cs [Design]",
-              "RelativeToolTip": "MainForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T18:42:27.877Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "testConsol.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\TestInConsole\\testConsol.cs",
-              "RelativeDocumentMoniker": "..\\TestInConsole\\testConsol.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\TestInConsole\\testConsol.cs",
-              "RelativeToolTip": "..\\TestInConsole\\testConsol.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAswB0AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T17:08:47.688Z",
-              "EditorCaption": ""
             }
           ]
         }

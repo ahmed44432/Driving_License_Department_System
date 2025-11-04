@@ -92,6 +92,7 @@
             this.Controls.Add(this.dgvPeopleList);
             this.Name = "PeopleForm";
             this.Text = "PeopleForm";
+            this.Load += new System.EventHandler(this.PeopleForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeopleList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

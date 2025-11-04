@@ -14,7 +14,7 @@ namespace DVLD.MainRelatedForms
 
         private void _RefreshPeopleList()
         {
-            dgvPeopleList.DataSource = clsPeapleBusinessLayer.GetAllPeople();
+            dgvPeopleList.DataSource = clsPeopleBusinessLayer.GetAllPeople();
         }
 
         private void btnADD_Click(object sender, EventArgs e)
@@ -23,6 +23,13 @@ namespace DVLD.MainRelatedForms
             addEditPerson.StartPosition = FormStartPosition.CenterScreen;
             addEditPerson.AutoScaleMode = AutoScaleMode.None;
             addEditPerson.ShowDialog();
+        }
+
+      
+
+        private void PeopleForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

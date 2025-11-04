@@ -43,7 +43,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txbFN = new System.Windows.Forms.TextBox();
             this.txbSD = new System.Windows.Forms.TextBox();
-            this.txbFTHD = new System.Windows.Forms.TextBox();
+            this.txbTH = new System.Windows.Forms.TextBox();
             this.txbLN = new System.Windows.Forms.TextBox();
             this.txbNNO = new System.Windows.Forms.TextBox();
             this.txbEMAIL = new System.Windows.Forms.TextBox();
@@ -55,6 +55,7 @@
             this.rbFemale = new System.Windows.Forms.RadioButton();
             this.dtpDATEOFBIRTH = new System.Windows.Forms.DateTimePicker();
             this.cbxCountry = new System.Windows.Forms.ComboBox();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -194,13 +195,13 @@
             this.txbSD.Size = new System.Drawing.Size(113, 22);
             this.txbSD.TabIndex = 22;
             // 
-            // txbFTHD
+            // txbTH
             // 
-            this.txbFTHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbFTHD.Location = new System.Drawing.Point(430, 32);
-            this.txbFTHD.Name = "txbFTHD";
-            this.txbFTHD.Size = new System.Drawing.Size(113, 22);
-            this.txbFTHD.TabIndex = 23;
+            this.txbTH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbTH.Location = new System.Drawing.Point(430, 32);
+            this.txbTH.Name = "txbTH";
+            this.txbTH.Size = new System.Drawing.Size(113, 22);
+            this.txbTH.TabIndex = 23;
             // 
             // txbLN
             // 
@@ -223,7 +224,7 @@
             this.txbEMAIL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbEMAIL.Location = new System.Drawing.Point(142, 148);
             this.txbEMAIL.Name = "txbEMAIL";
-            this.txbEMAIL.Size = new System.Drawing.Size(113, 22);
+            this.txbEMAIL.Size = new System.Drawing.Size(202, 22);
             this.txbEMAIL.TabIndex = 26;
             // 
             // txbPHONE
@@ -297,16 +298,28 @@
             // 
             // cbxCountry
             // 
+            this.cbxCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCountry.FormattingEnabled = true;
             this.cbxCountry.Location = new System.Drawing.Point(426, 145);
             this.cbxCountry.Name = "cbxCountry";
-            this.cbxCountry.Size = new System.Drawing.Size(121, 21);
+            this.cbxCountry.Size = new System.Drawing.Size(121, 24);
             this.cbxCountry.TabIndex = 34;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(607, 288);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(90, 38);
+            this.btnSave.TabIndex = 35;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // AddingPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cbxCountry);
             this.Controls.Add(this.dtpDATEOFBIRTH);
             this.Controls.Add(this.rbFemale);
@@ -318,7 +331,7 @@
             this.Controls.Add(this.txbEMAIL);
             this.Controls.Add(this.txbNNO);
             this.Controls.Add(this.txbLN);
-            this.Controls.Add(this.txbFTHD);
+            this.Controls.Add(this.txbTH);
             this.Controls.Add(this.txbSD);
             this.Controls.Add(this.txbFN);
             this.Controls.Add(this.label13);
@@ -334,7 +347,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "AddingPerson";
-            this.Size = new System.Drawing.Size(701, 309);
+            this.Size = new System.Drawing.Size(714, 346);
+            this.Load += new System.EventHandler(this.AddingPerson_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -356,7 +370,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txbFN;
         private System.Windows.Forms.TextBox txbSD;
-        private System.Windows.Forms.TextBox txbFTHD;
+        private System.Windows.Forms.TextBox txbTH;
         private System.Windows.Forms.TextBox txbLN;
         private System.Windows.Forms.TextBox txbNNO;
         private System.Windows.Forms.TextBox txbEMAIL;
@@ -368,5 +382,6 @@
         private System.Windows.Forms.RadioButton rbFemale;
         private System.Windows.Forms.DateTimePicker dtpDATEOFBIRTH;
         private System.Windows.Forms.ComboBox cbxCountry;
+        private System.Windows.Forms.Button btnSave;
     }
 }
