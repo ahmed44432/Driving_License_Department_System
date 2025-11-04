@@ -40,9 +40,7 @@ namespace DVLD.MainRelatedForms
         private void AddEditPerson_Load(object sender, EventArgs e)
         {
 
-            MessageBox.Show("UserControl Loaded!");
+           
         }
-
-      
     }
 }

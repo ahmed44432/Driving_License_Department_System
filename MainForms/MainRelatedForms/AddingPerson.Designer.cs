@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddingPerson));
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,7 +57,9 @@
             this.dtpDATEOFBIRTH = new System.Windows.Forms.DateTimePicker();
             this.cbxCountry = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -218,6 +221,7 @@
             this.txbNNO.Name = "txbNNO";
             this.txbNNO.Size = new System.Drawing.Size(113, 22);
             this.txbNNO.TabIndex = 25;
+            this.txbNNO.TextChanged += new System.EventHandler(this.txbNNO_TextChanged);
             // 
             // txbEMAIL
             // 
@@ -315,6 +319,10 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // AddingPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -350,6 +358,7 @@
             this.Size = new System.Drawing.Size(714, 346);
             this.Load += new System.EventHandler(this.AddingPerson_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,5 +392,6 @@
         private System.Windows.Forms.DateTimePicker dtpDATEOFBIRTH;
         private System.Windows.Forms.ComboBox cbxCountry;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

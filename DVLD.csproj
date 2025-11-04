@@ -58,60 +58,60 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddingPerson.cs">
+    <Compile Include="MainForms\MainRelatedForms\AddingPerson.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AddingPerson.Designer.cs">
+    <Compile Include="MainForms\MainRelatedForms\AddingPerson.Designer.cs">
       <DependentUpon>AddingPerson.cs</DependentUpon>
     </Compile>
-    <Compile Include="Browser.cs">
+    <Compile Include="MainForms\Browser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Browser.Designer.cs">
+    <Compile Include="MainForms\Browser.Designer.cs">
       <DependentUpon>Browser.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginScreen.cs">
+    <Compile Include="MainForms\LoginScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginScreen.Designer.cs">
+    <Compile Include="MainForms\LoginScreen.Designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="MainForms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="MainForms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainRelatedForms\AddEditPerson.cs">
+    <Compile Include="MainForms\MainRelatedForms\AddEditPerson.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainRelatedForms\AddEditPerson.Designer.cs">
+    <Compile Include="MainForms\MainRelatedForms\AddEditPerson.Designer.cs">
       <DependentUpon>AddEditPerson.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainRelatedForms\PeopleForm.cs">
+    <Compile Include="MainForms\MainRelatedForms\PeopleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainRelatedForms\PeopleForm.Designer.cs">
+    <Compile Include="MainForms\MainRelatedForms\PeopleForm.Designer.cs">
       <DependentUpon>PeopleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddingPerson.resx">
+    <EmbeddedResource Include="MainForms\MainRelatedForms\AddingPerson.resx">
       <DependentUpon>AddingPerson.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Browser.resx">
+    <EmbeddedResource Include="MainForms\Browser.resx">
       <DependentUpon>Browser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginScreen.resx">
+    <EmbeddedResource Include="MainForms\LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="MainForms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainRelatedForms\AddEditPerson.resx">
+    <EmbeddedResource Include="MainForms\MainRelatedForms\AddEditPerson.resx">
       <DependentUpon>AddEditPerson.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainRelatedForms\PeopleForm.resx">
+    <EmbeddedResource Include="MainForms\MainRelatedForms\PeopleForm.resx">
       <DependentUpon>PeopleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
