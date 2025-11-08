@@ -36,11 +36,5 @@ namespace DVLD.MainRelatedForms
         {
             this.Close();
         }
-
-        private void AddEditPerson_Load(object sender, EventArgs e)
-        {
-
-           
-        }
     }
 }

@@ -99,7 +99,6 @@
             this.Controls.Add(this.lbTitel);
             this.Name = "AddEditPerson";
             this.Text = "AddEditPerson";
-            this.Load += new System.EventHandler(this.AddEditPerson_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

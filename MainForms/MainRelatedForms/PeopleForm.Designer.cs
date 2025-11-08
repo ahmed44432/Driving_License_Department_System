@@ -44,6 +44,7 @@
             this.dgvPeopleList.Name = "dgvPeopleList";
             this.dgvPeopleList.Size = new System.Drawing.Size(799, 233);
             this.dgvPeopleList.TabIndex = 0;
+            this.dgvPeopleList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPeopleList_CellContentClick);
             // 
             // label1
             // 
@@ -57,11 +58,16 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "None",
+            "ID"});
             this.comboBox1.Location = new System.Drawing.Point(90, 117);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 2;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox1
             // 
@@ -69,6 +75,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(136, 20);
             this.textBox1.TabIndex = 3;
+            this.textBox1.Visible = false;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnADD
             // 
