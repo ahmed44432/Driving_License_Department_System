@@ -26,15 +26,25 @@ namespace DVLD.MainRelatedForms
             Person_info = person;
 
             if (Person_info.Save())
+            {
                 MessageBox.Show("Person saved successfully!");
+                this.Close();
+            }
             else
+            {
                 MessageBox.Show("Failed to save person!");
+            }
         }
 
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void addingPerson1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

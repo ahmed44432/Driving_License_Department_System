@@ -282,6 +282,7 @@
             this.rbMALE.TabStop = true;
             this.rbMALE.Text = "Male";
             this.rbMALE.UseVisualStyleBackColor = true;
+            this.rbMALE.CheckedChanged += new System.EventHandler(this.rbMALE_CheckedChanged);
             // 
             // rbFemale
             // 
@@ -294,6 +295,7 @@
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Female";
             this.rbFemale.UseVisualStyleBackColor = true;
+            this.rbFemale.CheckedChanged += new System.EventHandler(this.rbFemale_CheckedChanged);
             // 
             // dtpDATEOFBIRTH
             // 

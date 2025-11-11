@@ -85,6 +85,7 @@
             this.addingPerson1.Name = "addingPerson1";
             this.addingPerson1.Size = new System.Drawing.Size(714, 346);
             this.addingPerson1.TabIndex = 7;
+            this.addingPerson1.Load += new System.EventHandler(this.addingPerson1_Load);
             // 
             // AddEditPerson
             // 

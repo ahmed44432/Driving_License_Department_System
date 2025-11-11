@@ -23,6 +23,7 @@ namespace DVLD.MainRelatedForms
             addEditPerson.StartPosition = FormStartPosition.CenterScreen;
             addEditPerson.AutoScaleMode = AutoScaleMode.None;
             addEditPerson.ShowDialog();
+            _RefreshPeopleList();
         }
 
       
@@ -39,25 +40,38 @@ namespace DVLD.MainRelatedForms
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (comboBox1.SelectedIndex)
+           
+            if (comboBox1.SelectedIndex == 0) {
+                _RefreshPeopleList();
+                textBox1.Clear();
+                textBox1.Visible = false;
+            }
+            else
             {
-                case 0 :
-                    _RefreshPeopleList();
-                    textBox1.Clear();
-                    textBox1.Visible = false; break;
-                case 1 :
-                    textBox1.Visible = true; break;
-
+                textBox1.Visible = true;
             }
             
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (int.TryParse(textBox1.Text, out int id))
-            {
-                dgvPeopleList.DataSource = clsPeopleBusinessLayer.GetAllPeopleBYID(id);
+            if(comboBox1.SelectedIndex != 0) {
+                if (int.TryParse(textBox1.Text, out int id))
+                {
+                    if (comboBox1.SelectedIndex == 1)
+                    {
+                        dgvPeopleList.DataSource = clsPeopleBusinessLayer.GetAllPeopleBYID(id);
+                    }
+                
+                }
+                if (comboBox1.SelectedIndex == 2) {
+
+                    dgvPeopleList.DataSource = 
+                        clsPeopleBusinessLayer.GetAllPeopleByNationalNO(textBox1.Text);
+                
+                }
             }
+           
         }
     }
 }
