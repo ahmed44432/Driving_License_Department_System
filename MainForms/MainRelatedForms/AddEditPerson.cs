@@ -19,13 +19,13 @@ namespace DVLD.MainRelatedForms
             addingPerson1.OnPersonAdded += Person_DataBack;
         }
 
-        clsPeopleBusinessLayer Person_info;
+        private clsPeopleBusinessLayer _Person_info;
 
         private void Person_DataBack(clsPeopleBusinessLayer person)
         {
-            Person_info = person;
+            _Person_info = person;
 
-            if (Person_info.Save())
+            if (_Person_info.Save())
             {
                 MessageBox.Show("Person saved successfully!");
                 this.Close();
@@ -44,7 +44,9 @@ namespace DVLD.MainRelatedForms
 
         private void addingPerson1_Load(object sender, EventArgs e)
         {
-
+            //if () {
+            //    lbID.Text = _Person_info.ID.ToString();
+            //}
         }
     }
 }

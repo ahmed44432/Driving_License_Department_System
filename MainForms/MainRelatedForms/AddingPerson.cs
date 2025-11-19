@@ -108,9 +108,11 @@ namespace DVLD
             }
 
 
-            if (string.IsNullOrWhiteSpace(txbPHONE.Text))
+            if (string.IsNullOrWhiteSpace(txbPHONE.Text)
+                || (!int.TryParse(txbPHONE.Text,out int tp)) 
+                || (txbPHONE.Text.Length > 10))
             {
-                errorProvider1.SetError(txbPHONE, "Empty Value");
+                errorProvider1.SetError(txbPHONE, "Empty Value OR Not a Number OR Bigger Than 10 Chars");
                 return false;
             }
             else
@@ -144,9 +146,9 @@ namespace DVLD
             {
                 MessageBox.Show("FILL the TANck ","gg",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
-            } 
+            }
+
             
-          
             
             person.FirstName = txbFN.Text;
             person.LastName = txbLN.Text;
@@ -158,7 +160,11 @@ namespace DVLD
             person.Email = txbEMAIL.Text;
             person.Phone = txbPHONE.Text;
             person.DateOfBirth = dtpDATEOFBIRTH.Value;
-            if (string.IsNullOrWhiteSpace(pictureBox1.ImageLocation)) {  pictureBox1.ImageLocation = ""; }
+
+
+            if (string.IsNullOrWhiteSpace(IICH._sourcePath)) { pictureBox1.ImageLocation = ""; }
+            else { File.Copy(IICH._sourcePath, IICH._destinationPath, true); }
+            pictureBox1.ImageLocation = IICH._destinationPath == null ? "" : IICH._destinationPath;  
             person.ImagePath = pictureBox1.ImageLocation;
             person.NationalityCountryID = (int)cbxCountry.SelectedValue;
 
@@ -188,11 +194,19 @@ namespace DVLD
             return true;
         }
 
+        private struct st_info_image_chaine
+        {
+            public string _sourcePath;
+            public string _destinationPath;
+        }
+
+        st_info_image_chaine IICH;
+      
+
         private void lkbSetImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
             openFileDialog1.Title = "Smile :)";
-            string guid = Guid.NewGuid().ToString();
             openFileDialog1.FileName = "Picture";
             openFileDialog1.Filter =
                 @"Image Files (*.jpg;*.jpeg;*.png;*.bmp;*.gif)
@@ -204,6 +218,7 @@ namespace DVLD
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK) {
                 string sourcePath = openFileDialog1.FileName;
+                string guid = Guid.NewGuid().ToString();
                 string ext = Path.GetExtension(sourcePath).ToLower();
 
                 if (ext != ".jpg" && ext != ".png")
@@ -218,10 +233,12 @@ namespace DVLD
                 Directory.CreateDirectory(ImageFilePath);
                 string newFileName = guid + ext;
                 string destinationPath = Path.Combine(ImageFilePath, newFileName);
-                File.Copy(sourcePath, destinationPath, true);
+                IICH._sourcePath = sourcePath;
+                IICH._destinationPath = destinationPath;
 
-                pictureBox1.Image = Image.FromFile(destinationPath);
-                pictureBox1.ImageLocation = destinationPath;
+                pictureBox1.Image = Image.FromFile(sourcePath);
+                lkbRemoveImage.Visible = true;
+                
                 
             }
         }
@@ -240,6 +257,26 @@ namespace DVLD
             pictureBox1.Image = Image.FromFile(path);
             //pictureBox1.ImageLocation = path;  
             
+        }
+
+        private void lkbRemoveImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (rbMALE.Checked)
+            {
+                string path = @"C:\Users\DELL\Pictures\person_man.png";
+                pictureBox1.Image = Image.FromFile(path);
+            }
+            else
+            {
+                string path = @"C:\Users\DELL\Pictures\person_woman.png";
+                pictureBox1.Image = Image.FromFile(path);
+            }
+
+            lkbRemoveImage.Visible = false;
+            pictureBox1.ImageLocation = "";
+            IICH._sourcePath = "";
+            IICH._destinationPath = "";
+
         }
     }
 

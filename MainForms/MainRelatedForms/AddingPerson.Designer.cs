@@ -58,7 +58,7 @@
             this.cbxCountry = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lkbRemoveImage = new System.Windows.Forms.LinkLabel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -328,16 +328,17 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // linkLabel1
+            // lkbRemoveImage
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(624, 242);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(79, 13);
-            this.linkLabel1.TabIndex = 36;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Remove Image";
-            this.linkLabel1.Visible = false;
+            this.lkbRemoveImage.AutoSize = true;
+            this.lkbRemoveImage.Location = new System.Drawing.Point(624, 242);
+            this.lkbRemoveImage.Name = "lkbRemoveImage";
+            this.lkbRemoveImage.Size = new System.Drawing.Size(79, 13);
+            this.lkbRemoveImage.TabIndex = 36;
+            this.lkbRemoveImage.TabStop = true;
+            this.lkbRemoveImage.Text = "Remove Image";
+            this.lkbRemoveImage.Visible = false;
+            this.lkbRemoveImage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkbRemoveImage_LinkClicked);
             // 
             // openFileDialog1
             // 
@@ -347,7 +348,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.lkbRemoveImage);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cbxCountry);
             this.Controls.Add(this.dtpDATEOFBIRTH);
@@ -414,7 +415,7 @@
         private System.Windows.Forms.ComboBox cbxCountry;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lkbRemoveImage;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
