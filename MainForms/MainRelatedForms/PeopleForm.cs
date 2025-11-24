@@ -13,11 +13,13 @@ namespace DVLD.MainRelatedForms
             dgvPeopleList.ReadOnly = true;
             dgvPeopleList.AllowUserToAddRows = false;
             _RefreshPeopleList();
+            dgvPeopleList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
         private void _RefreshPeopleList()
         {
             dgvPeopleList.DataSource = clsPeopleBusinessLayer.GetAllPeople();
+       
         }
 
         private void btnADD_Click(object sender, EventArgs e)
@@ -28,7 +30,6 @@ namespace DVLD.MainRelatedForms
             addEditPerson.ShowDialog();
             _RefreshPeopleList();
         }
-
       
 
         private void PeopleForm_Load(object sender, EventArgs e)
@@ -66,93 +67,59 @@ namespace DVLD.MainRelatedForms
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if(comboBox1.SelectedIndex != (int) ComboboxItemsNumber.None) {
-                if (int.TryParse(textBox1.Text, out int id))
-                {
-                    if (comboBox1.SelectedIndex == (int)ComboboxItemsNumber.PersonID)
-                    {
-                        dgvPeopleList.DataSource = 
-                            clsPeopleBusinessLayer.GetAllPeopleBYID(id);
-                        
-                    }
-                    lbRecordNumbers.Text = dgvPeopleList.RowCount.ToString();
-                    return;
-                }
-                if (comboBox1.SelectedIndex == (int)ComboboxItemsNumber.NationaNO) {
+            if (comboBox1.SelectedIndex == (int)ComboboxItemsNumber.None)
+                return;
 
-                    dgvPeopleList.DataSource = 
-                        clsPeopleBusinessLayer.GetAllPeopleByNationalNO(textBox1.Text);
-                    lbRecordNumbers.Text = dgvPeopleList.RowCount.ToString();
-                    return;
-                }
-                if (comboBox1.SelectedIndex == (int)ComboboxItemsNumber.FirstName)
-                {
+            string text = textBox1.Text;
 
-                    dgvPeopleList.DataSource =
-                        clsPeopleBusinessLayer.GetAllPeopleByFirstName(textBox1.Text);
-                    lbRecordNumbers.Text = dgvPeopleList.RowCount.ToString();
-                    return;
-                }
-                if (comboBox1.SelectedIndex == (int)ComboboxItemsNumber.SecondName)
-                {
+            switch ((ComboboxItemsNumber)comboBox1.SelectedIndex)
+            {
+                case ComboboxItemsNumber.PersonID:
+                    if (int.TryParse(text, out int id))
+                        dgvPeopleList.DataSource = clsPeopleBusinessLayer.GetAllPeopleBYID(id);
+                    break;
 
-                    dgvPeopleList.DataSource =
-                        clsPeopleBusinessLayer.GetAllPeopleBySecondName(textBox1.Text);
-                    lbRecordNumbers.Text = dgvPeopleList.RowCount.ToString();
-                    return;
-                }
-                if (comboBox1.SelectedIndex == (int)ComboboxItemsNumber.ThirdName)
-                {
+                case ComboboxItemsNumber.NationaNO:
+                    dgvPeopleList.DataSource = clsPeopleBusinessLayer.GetAllPeopleByNationalNO(text);
+                    break;
 
-                    dgvPeopleList.DataSource =
-                        clsPeopleBusinessLayer.GetAllPeopleByThirdName(textBox1.Text);
-                    lbRecordNumbers.Text = dgvPeopleList.RowCount.ToString();
-                    return;
-                }
-                if (comboBox1.SelectedIndex == (int)ComboboxItemsNumber.LastName)
-                {
+                case ComboboxItemsNumber.FirstName:
+                    dgvPeopleList.DataSource = clsPeopleBusinessLayer.GetAllPeopleByFirstName(text);
+                    break;
 
-                    dgvPeopleList.DataSource =
-                        clsPeopleBusinessLayer.GetAllPeopleByLastName(textBox1.Text);
-                    lbRecordNumbers.Text = dgvPeopleList.RowCount.ToString();
-                    return;
-                }
-                if (comboBox1.SelectedIndex == (int)ComboboxItemsNumber.Nationality)
-                {
+                case ComboboxItemsNumber.SecondName:
+                    dgvPeopleList.DataSource = clsPeopleBusinessLayer.GetAllPeopleBySecondName(text);
+                    break;
 
-                    dgvPeopleList.DataSource =
-                        clsPeopleBusinessLayer.GetAllPeopleByNationality(textBox1.Text);
-                    lbRecordNumbers.Text = dgvPeopleList.RowCount.ToString();   
-                    return;
-                }
-                if (comboBox1.SelectedIndex == (int)ComboboxItemsNumber.Gender)
-                {
+                case ComboboxItemsNumber.ThirdName:
+                    dgvPeopleList.DataSource = clsPeopleBusinessLayer.GetAllPeopleByThirdName(text);
+                    break;
+
+                case ComboboxItemsNumber.LastName:
+                    dgvPeopleList.DataSource = clsPeopleBusinessLayer.GetAllPeopleByLastName(text);
+                    break;
+
+                case ComboboxItemsNumber.Nationality:
+                    dgvPeopleList.DataSource = clsPeopleBusinessLayer.GetAllPeopleByNationality(text);
+                    break;
+
+                case ComboboxItemsNumber.Gender:
                     textBox1.MaxLength = 1;
-                    dgvPeopleList.DataSource =
-                        clsPeopleBusinessLayer.GetAllPeopleByGender(textBox1.Text);
-                    textBox1.MaxLength = Int16.MaxValue;
-                    lbRecordNumbers.Text = dgvPeopleList.RowCount.ToString();
-                    return;
-                }
-                if (comboBox1.SelectedIndex == (int)ComboboxItemsNumber.Phone)
-                {
+                    dgvPeopleList.DataSource = clsPeopleBusinessLayer.GetAllPeopleByGender(text);
+                    textBox1.MaxLength = short.MaxValue;
+                    break;
 
-                    dgvPeopleList.DataSource =
-                        clsPeopleBusinessLayer.GetAllPeopleByPhone(textBox1.Text);
-                    lbRecordNumbers.Text = dgvPeopleList.RowCount.ToString();
-                    return;
-                }
-                if (comboBox1.SelectedIndex == (int)ComboboxItemsNumber.Email)
-                {
+                case ComboboxItemsNumber.Phone:
+                    dgvPeopleList.DataSource = clsPeopleBusinessLayer.GetAllPeopleByPhone(text);
+                    break;
 
-                    dgvPeopleList.DataSource =
-                        clsPeopleBusinessLayer.GetAllPeopleByEmail(textBox1.Text);
-                    lbRecordNumbers.Text = dgvPeopleList.RowCount.ToString();
-                    return;
-                }
-
+                case ComboboxItemsNumber.Email:
+                    dgvPeopleList.DataSource = clsPeopleBusinessLayer.GetAllPeopleByEmail(text);
+                    break;
             }
-           
+
+            lbRecordNumbers.Text = dgvPeopleList.RowCount.ToString();
+
         }
 
         private void addPersonToolStripMenuItem_Click(object sender, EventArgs e)
@@ -182,14 +149,35 @@ namespace DVLD.MainRelatedForms
 
             if (dgvPeopleList.SelectedRows.Count == 0)
                 return;
+            if (
+                MessageBox.Show("Are you sure you want to delete this person","Delete",
+                MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes
+                )
+            {
+                int personID =
+                    Convert.ToInt32(dgvPeopleList.SelectedRows[0].Cells["PersonID"].Value);
+                string ImagePath =
+                    (dgvPeopleList.SelectedRows[0].Cells["ImagePath"].Value == DBNull.Value) ?
+                    "" : (string)dgvPeopleList.SelectedRows[0].Cells["ImagePath"].Value;
+                //null
+                if (!string.IsNullOrWhiteSpace(ImagePath)) { File.Delete(ImagePath); }
+                clsPeopleBusinessLayer.DeletePerson(personID);
+                _RefreshPeopleList();
+                lbRecordNumbers.Text = dgvPeopleList.RowCount.ToString();
+            }
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvPeopleList.SelectedRows.Count == 0)
+                return;
             int personID =
-                Convert.ToInt32(dgvPeopleList.SelectedRows[0].Cells["PersonID"].Value);
-            string ImagePath =(string)
-                dgvPeopleList.SelectedRows[0].Cells["ImagePath"].Value;
-            if (!string.IsNullOrWhiteSpace(ImagePath)) { File.Delete(ImagePath); }
-            clsPeopleBusinessLayer.DeletePerson(personID);
+                   Convert.ToInt32(dgvPeopleList.SelectedRows[0].Cells["PersonID"].Value);
+            AddEditPerson addEditPerson = new AddEditPerson(personID);
+            addEditPerson.StartPosition = FormStartPosition.CenterScreen;
+            addEditPerson.AutoScaleMode = AutoScaleMode.None;
+            addEditPerson.ShowDialog();
             _RefreshPeopleList();
-            lbRecordNumbers.Text = dgvPeopleList.RowCount.ToString();
         }
     }
 }

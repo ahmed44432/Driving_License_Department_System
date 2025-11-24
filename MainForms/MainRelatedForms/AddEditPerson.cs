@@ -16,14 +16,29 @@ namespace DVLD.MainRelatedForms
         public AddEditPerson()
         {
             InitializeComponent();
-            addingPerson1.OnPersonAdded += Person_DataBack;
+            addingPerson1.OnPersonSaved += Person_DataBack;
+            addingPerson1.SetAddMode();
+        }
+        public AddEditPerson(int personid)
+        {
+            InitializeComponent();
+            addingPerson1.OnPersonSaved += Person_DataBack;
+            clsPeopleBusinessLayer p = clsPeopleBusinessLayer.GetPersonByID(personid);
+            lbID.Text = p.ID.ToString();
+            lbTitel.Text = "  Edit Person";
+            _Mode = PersonMode.edit;
+            addingPerson1.SetEditMode(p);
         }
 
         private clsPeopleBusinessLayer _Person_info;
+        public enum PersonMode  {add = 0, edit = 1}
 
-        private void Person_DataBack(clsPeopleBusinessLayer person)
+        PersonMode _Mode;
+
+        private void Person_DataBack(clsPeopleBusinessLayer person, int mode)
         {
             _Person_info = person;
+            _Mode = (PersonMode)mode;
 
             if (_Person_info.Save())
             {
@@ -44,9 +59,8 @@ namespace DVLD.MainRelatedForms
 
         private void addingPerson1_Load(object sender, EventArgs e)
         {
-            //if () {
-            //    lbID.Text = _Person_info.ID.ToString();
-            //}
+            
+            
         }
     }
 }

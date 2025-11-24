@@ -21,9 +21,26 @@ namespace DVLD
 
         clsPeopleBusinessLayer person = new clsPeopleBusinessLayer();
 
-        public delegate void SendPersonDelegate(clsPeopleBusinessLayer person);
+        public delegate void SendPersonDelegate(clsPeopleBusinessLayer person,int mode);
 
-        public event SendPersonDelegate OnPersonAdded;
+        int _Mode = 0; // add = 0, edit = 1;
+
+        public event SendPersonDelegate OnPersonSaved;
+
+        public void SetAddMode()
+        {
+            _Mode = 0;
+            person = new clsPeopleBusinessLayer();
+            
+        }
+
+        public void SetEditMode(clsPeopleBusinessLayer p)
+        {
+            _Mode = 1;
+            person = p;
+            LoadPersonToEdit(p.ID);
+            
+        }
         private void AddingPerson_Load(object sender, EventArgs e)
         {
             DataTable dtCountries = clsCountriesBusinessLayer.GetAllCoutries();
@@ -35,6 +52,7 @@ namespace DVLD
             dtpDATEOFBIRTH.MaxDate = DateTime.Now;
             
             rbMALE.Checked = true;
+      
 
             IsValidForSave();
         }
@@ -81,8 +99,16 @@ namespace DVLD
             {
                 if (clsPeopleBusinessLayer.IsPersonExist(txbNNO.Text))
                 {
-                    errorProvider1.SetError(txbNNO, "this number existes");
-                    return false;
+                    if (_Mode == 1)
+                    {
+                        if(txbNNO.Text == person.NationalNumber)
+                            result = true;
+                    }
+                    else
+                    {
+                        errorProvider1.SetError(txbNNO, "this number existes");
+                        return false;
+                    }
                 }
                 else
                 {
@@ -137,7 +163,50 @@ namespace DVLD
 
             return result;
         }
-    
+
+        public void LoadPersonToEdit(int personID)
+        {
+            _Mode = 1;  
+
+            clsPeopleBusinessLayer personToEdit = 
+                clsPeopleBusinessLayer.GetPersonByID(personID);
+
+            if (personToEdit == null)
+            {
+                MessageBox.Show("Person Not Found");
+                return;
+            }
+
+            // Fill the textboxes
+            txbFN.Text = personToEdit.FirstName;
+            txbLN.Text = personToEdit.LastName;
+            txbTH.Text = personToEdit.ThirdName;
+            txbSD.Text = personToEdit.SecondName;
+            txbNNO.Text = personToEdit.NationalNumber;
+            txbADDRESS.Text = personToEdit.Address;
+            txbEMAIL.Text = personToEdit.Email;
+            txbPHONE.Text = personToEdit.Phone;
+            dtpDATEOFBIRTH.Value = personToEdit.DateOfBirth;
+
+            rbMALE.Checked = personToEdit.Gender == 'M';
+            rbFemale.Checked = personToEdit.Gender == 'F';
+
+            cbxCountry.SelectedValue = personToEdit.NationalityCountryID;
+
+            // Load image
+            if (!string.IsNullOrWhiteSpace(personToEdit.ImagePath) && File.Exists(personToEdit.ImagePath))
+            {
+                pictureBox1.ImageLocation = personToEdit.ImagePath;
+                lkbRemoveImage.Visible = true;
+            }
+            else
+            {
+                lkbRemoveImage.Visible = false;
+            }
+
+           
+            
+        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -160,7 +229,7 @@ namespace DVLD
             person.Email = txbEMAIL.Text;
             person.Phone = txbPHONE.Text;
             person.DateOfBirth = dtpDATEOFBIRTH.Value;
-
+            _Mode = 1;
 
             if (string.IsNullOrWhiteSpace(IICH._sourcePath)) { pictureBox1.ImageLocation = ""; }
             else { File.Copy(IICH._sourcePath, IICH._destinationPath, true); }
@@ -168,9 +237,13 @@ namespace DVLD
             person.ImagePath = pictureBox1.ImageLocation;
             person.NationalityCountryID = (int)cbxCountry.SelectedValue;
 
-            OnPersonAdded?.Invoke(person);
-            
-            
+            //OnPersonAdded?.Invoke(person,_Mode);
+
+            if (_Mode == 0)
+                OnPersonSaved?.Invoke(person, 0);
+            else
+                OnPersonSaved?.Invoke(person, 1);
+
         }
         private void dtpDATEOFBIRTH_ValueChanged(object sender, EventArgs e)
         {
@@ -221,9 +294,9 @@ namespace DVLD
                 string guid = Guid.NewGuid().ToString();
                 string ext = Path.GetExtension(sourcePath).ToLower();
 
-                if (ext != ".jpg" && ext != ".png")
+                if (ext != ".jpg" && ext != ".png" && ext != ".jpeg" && ext != ".jpg")
                 {
-                    MessageBox.Show("Only JPG or PNG images are supported. Please select a valid image.",
+                    MessageBox.Show("Only JPG or PNG or jpg or jpeg images are supported. Please select a valid image.",
                                     "Invalid File Type",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Warning);

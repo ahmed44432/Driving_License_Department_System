@@ -52,9 +52,9 @@
             // 
             this.dgvPeopleList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPeopleList.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvPeopleList.Location = new System.Drawing.Point(0, 147);
+            this.dgvPeopleList.Location = new System.Drawing.Point(15, 146);
             this.dgvPeopleList.Name = "dgvPeopleList";
-            this.dgvPeopleList.Size = new System.Drawing.Size(799, 233);
+            this.dgvPeopleList.Size = new System.Drawing.Size(1005, 233);
             this.dgvPeopleList.TabIndex = 0;
             this.dgvPeopleList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPeopleList_CellContentClick);
             // 
@@ -83,7 +83,7 @@
             // 
             this.addPersonToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addPersonToolStripMenuItem.Name = "addPersonToolStripMenuItem";
-            this.addPersonToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.addPersonToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addPersonToolStripMenuItem.Text = "Add New Person";
             this.addPersonToolStripMenuItem.Click += new System.EventHandler(this.addPersonToolStripMenuItem_Click);
             // 
@@ -91,8 +91,9 @@
             // 
             this.editToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
@@ -104,13 +105,13 @@
             // sendEToolStripMenuItem
             // 
             this.sendEToolStripMenuItem.Name = "sendEToolStripMenuItem";
-            this.sendEToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.sendEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sendEToolStripMenuItem.Text = "Send Email";
             // 
             // mailToolStripMenuItem
             // 
             this.mailToolStripMenuItem.Name = "mailToolStripMenuItem";
-            this.mailToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.mailToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mailToolStripMenuItem.Text = "Phone Call";
             // 
             // label1
@@ -160,7 +161,7 @@
             // btnADD
             // 
             this.btnADD.Image = ((System.Drawing.Image)(resources.GetObject("btnADD.Image")));
-            this.btnADD.Location = new System.Drawing.Point(757, 111);
+            this.btnADD.Location = new System.Drawing.Point(989, 112);
             this.btnADD.Name = "btnADD";
             this.btnADD.Size = new System.Drawing.Size(31, 32);
             this.btnADD.TabIndex = 4;
@@ -191,7 +192,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1043, 450);
             this.Controls.Add(this.lbRecordNumbers);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnADD);

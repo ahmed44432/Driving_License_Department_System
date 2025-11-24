@@ -124,7 +124,7 @@
   <data name="showDetailsToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAABSBJREFUeF7tmFtsFFUcxheB+iIx0Ad8EB+8NTExDe50WwRTY0nKgw8+mBrviSba
+        DQAACw0B7QfALAAABSBJREFUeF7tmFtsFFUcxheB+iIx0Ad8EB+8NTExDe50WwRTY0nKgw8+mBrviSba
         kBQ1xpjoA1Gh8RIxNJrQy85sJVGoLUIMXgvbneJGu8QtAa1lwYeyUsBsaxct1FWO//94znQy+Q9hdzgz
         s3a/5Jdtp3Nmvu+bmTNnG6qootL07ImZ29oy+QPPn8jPvvjLeWZl08nzrH50yh3p3Fz9aC51w66RzfyU
         wRGGf+FkPm8PLnjqeJ4OVQKht3ezFTsT+/mpgyG88lRwQfOxaTJMKWAByPLe+Ff89P6Luu0FD479TgYp
@@ -213,4 +213,7 @@
         AABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>69</value>
+  </metadata>
 </root>
