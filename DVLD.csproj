@@ -106,6 +106,12 @@
     <Compile Include="MainForms\MainRelatedForms\PersonInformation.Designer.cs">
       <DependentUpon>PersonInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForms\MainRelatedForms\UsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\UsersForm.Designer.cs">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForms\MainRelatedForms\AddingPerson.resx">
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\MainRelatedForms\PersonInformation.resx">
       <DependentUpon>PersonInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\MainRelatedForms\UsersForm.resx">
+      <DependentUpon>UsersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -35,6 +35,9 @@
             this.tspmiDrivers = new System.Windows.Forms.ToolStripMenuItem();
             this.tspmiUsers = new System.Windows.Forms.ToolStripMenuItem();
             this.tspmiAccountSettings = new System.Windows.Forms.ToolStripMenuItem();
+            this.currentUserInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSignOut = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,14 +92,40 @@
             this.tspmiUsers.Name = "tspmiUsers";
             this.tspmiUsers.Size = new System.Drawing.Size(118, 52);
             this.tspmiUsers.Text = "Users";
+            this.tspmiUsers.Click += new System.EventHandler(this.tspmiUsers_Click);
             // 
             // tspmiAccountSettings
             // 
+            this.tspmiAccountSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.currentUserInfoToolStripMenuItem,
+            this.changePasswordToolStripMenuItem,
+            this.tsmiSignOut});
             this.tspmiAccountSettings.Image = ((System.Drawing.Image)(resources.GetObject("tspmiAccountSettings.Image")));
             this.tspmiAccountSettings.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspmiAccountSettings.Name = "tspmiAccountSettings";
             this.tspmiAccountSettings.Size = new System.Drawing.Size(213, 52);
             this.tspmiAccountSettings.Text = "Account Settings";
+            // 
+            // currentUserInfoToolStripMenuItem
+            // 
+            this.currentUserInfoToolStripMenuItem.Name = "currentUserInfoToolStripMenuItem";
+            this.currentUserInfoToolStripMenuItem.Size = new System.Drawing.Size(241, 30);
+            this.currentUserInfoToolStripMenuItem.Text = "Current user info";
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(241, 30);
+            this.changePasswordToolStripMenuItem.Text = "Change Password";
+            // 
+            // tsmiSignOut
+            // 
+            this.tsmiSignOut.Image = ((System.Drawing.Image)(resources.GetObject("tsmiSignOut.Image")));
+            this.tsmiSignOut.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmiSignOut.Name = "tsmiSignOut";
+            this.tsmiSignOut.Size = new System.Drawing.Size(241, 30);
+            this.tsmiSignOut.Text = "Sign Out";
+            this.tsmiSignOut.Click += new System.EventHandler(this.tsmiSignOut_Click);
             // 
             // pictureBox1
             // 
@@ -137,5 +166,8 @@
         private System.Windows.Forms.ToolStripMenuItem tspmiUsers;
         private System.Windows.Forms.ToolStripMenuItem tspmiAccountSettings;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem currentUserInfoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSignOut;
     }
 }

@@ -17,11 +17,37 @@ namespace DVLD
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            LoginScreen loginScreen = new LoginScreen();
-            loginScreen.StartPosition = FormStartPosition.CenterScreen;
-            if (loginScreen.ShowDialog() == DialogResult.OK)
+       
+
+            while (true)
             {
-                Application.Run(new MainForm());
+                using (LoginScreen loginScreen = new LoginScreen())
+                {
+                    loginScreen.StartPosition = FormStartPosition.CenterScreen;
+                    if (loginScreen.ShowDialog() == DialogResult.OK)
+                    {
+                        using (MainForm main = new MainForm())
+                        {
+                            Application.Run(main);
+
+                            if (main.LogoutRequested)
+                            {
+                                // رجوع إلى شاشة الدخول
+                                continue;
+                            }
+                            else
+                            {
+                                // خروج من التطبيق
+                                break;
+                            }
+
+                        }
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
             }
         }
     }

@@ -207,5 +207,10 @@ namespace DVLD.MainRelatedForms
             PersonInfo.ShowDialog();
             _RefreshPeopleList();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,0 +1,31 @@
+# ملفات Visual Studio
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# مجلدات النظام والتجميع
+bin/
+obj/
+*.pdb
+*.cache
+*.log
+
+# WebView2 / Edge cache
+DVLD.exe.WebView2/
+
+# مجلدات Visual Studio الخاصة بالإعدادات
+.vs/
+
+# ملفات NuGet
+packages/
+*.nupkg
+
+# ملفات إعدادات أخرى
+*.config
+*.db
+
+# ملفات الترجمة المؤقتة
+*.dll
+*.exe
+

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DVLD.MainForms.MainRelatedForms;
 using DVLD.MainRelatedForms;
 
 namespace DVLD
@@ -18,6 +19,8 @@ namespace DVLD
             InitializeComponent();
             
         }
+
+        public bool LogoutRequested = false;
 
         private void tspmiPeople_Click(object sender, EventArgs e)
         {
@@ -40,6 +43,25 @@ namespace DVLD
             pictureBox1.Top = (this.ClientSize.Height - pictureBox1.Height) / 2;
         }
 
-     
+        private void tsmiSignOut_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // إخفاء MainForm الحالي
+
+            using (LoginScreen loginScreen = new LoginScreen())
+            {
+                LogoutRequested = true;
+                this.Close();
+
+            }
+
+        }
+
+        private void tspmiUsers_Click(object sender, EventArgs e)
+        {
+            UsersForm usersForm = new UsersForm();
+            usersForm.StartPosition = FormStartPosition.CenterScreen;
+            usersForm.ShowDialog();
+        }
     }
+    
 }
