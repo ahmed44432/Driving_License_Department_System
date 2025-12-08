@@ -23,12 +23,15 @@ namespace DVLD.MainForms.MainRelatedForms
 
         private void btnADD_Click(object sender, EventArgs e)
         {
-
+            AddUpdateUser addUpdateUser = new AddUpdateUser();
+            addUpdateUser.StartPosition = FormStartPosition.CenterScreen;
+            addUpdateUser.ShowDialog();
         }
 
         private void UsersForm_Load(object sender, EventArgs e)
         {
             dgvUsers.DataSource = clsUserBusinessLayer.GetAllUsers();
+            lbRecordNumbers.Text = dgvUsers.RowCount.ToString();
         }
     }
 }

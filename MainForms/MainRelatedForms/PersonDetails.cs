@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
+using DVLD.MainForms.MainRelatedForms;
 using DVLD.MainRelatedForms;
 
 namespace DVLD
@@ -17,6 +18,8 @@ namespace DVLD
         public PersonDetails()
         {
             InitializeComponent();
+            _DefLabels();
+            
         }
 
         clsPeopleBusinessLayer _person = new clsPeopleBusinessLayer();
@@ -25,10 +28,30 @@ namespace DVLD
         public void setinfo(clsPeopleBusinessLayer p)
         {
             _person = p;
+            _RefreshPersonInfo(_person);
         }
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void _DefLabels()
+        {
+          
+            lbName.Text = "[????]";
+            lbNNO.Text = "[????]";
+            lbGender.Text = "[????]";
+            lbEmail.Text = "[????]";
+            lbAddress.Text = "[????]";
+            lbPersonID.Text = "[????]";
+            lbPhone.Text = "[????]";
+            lbDateOfBirth.Text = "[????]";
+            lbCountry.Text = "[????]";
+            string path = @"C:\Users\DELL\Pictures\person_man.png";
+            pictureBox1.Image = Image.FromFile(path);
+            lkbEditPerson.Enabled = false;
+            
+            
         }
 
         private void PersinDetails_Load(object sender, EventArgs e)
@@ -38,6 +61,13 @@ namespace DVLD
 
         private void _RefreshPersonInfo(clsPeopleBusinessLayer person)
         {
+
+            if(person == null || person.ID == -1)
+            {
+                _DefLabels();
+                return;
+            }
+            lkbEditPerson.Enabled = true;
             _person = person;
             lbName.Text =
                person.FirstName + " " + person.SecondName + " " + person.ThirdName

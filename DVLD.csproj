@@ -88,6 +88,24 @@
     <Compile Include="MainForms\MainRelatedForms\AddEditPerson.Designer.cs">
       <DependentUpon>AddEditPerson.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForms\MainRelatedForms\AddingUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\AddingUser.Designer.cs">
+      <DependentUpon>AddingUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\AddUpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\AddUpdateUser.Designer.cs">
+      <DependentUpon>AddUpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\Filter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\Filter.Designer.cs">
+      <DependentUpon>Filter.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForms\MainRelatedForms\PeopleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +146,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\MainRelatedForms\AddEditPerson.resx">
       <DependentUpon>AddEditPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\MainRelatedForms\AddingUser.resx">
+      <DependentUpon>AddingUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\MainRelatedForms\AddUpdateUser.resx">
+      <DependentUpon>AddUpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\MainRelatedForms\Filter.resx">
+      <DependentUpon>Filter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\MainRelatedForms\PeopleForm.resx">
       <DependentUpon>PeopleForm.cs</DependentUpon>
