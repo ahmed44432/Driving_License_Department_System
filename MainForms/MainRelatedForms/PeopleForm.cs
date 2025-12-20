@@ -15,6 +15,7 @@ namespace DVLD.MainRelatedForms
             dgvPeopleList.AllowUserToAddRows = false;
             _RefreshPeopleList();
             dgvPeopleList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            comboBox1.SelectedIndex = 0;
         }
 
         private void _RefreshPeopleList()
@@ -157,13 +158,24 @@ namespace DVLD.MainRelatedForms
                 return;
             }
 
+            int personID =
+                   Convert.ToInt32(dgvPeopleList.SelectedRows[0].Cells["PersonID"].Value);
+
+            if (clsUserBusinessLayer.IsUserLinked(personID))
+            {
+                MessageBox.Show(
+               @"This Person cannot be deleted because it is linked to existing records in the system."
+                   ,"special person",MessageBoxButtons.OK , MessageBoxIcon.Information);
+    
+                return;
+            }
+
             if (
                 MessageBox.Show("Are you sure you want to delete this person","Delete",
                 MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes
                 )
             {
-                int personID =
-                    Convert.ToInt32(dgvPeopleList.SelectedRows[0].Cells["PersonID"].Value);
+               
                 string ImagePath =
                     (dgvPeopleList.SelectedRows[0].Cells["ImagePath"].Value == DBNull.Value) ?
                     "" : (string)dgvPeopleList.SelectedRows[0].Cells["ImagePath"].Value;

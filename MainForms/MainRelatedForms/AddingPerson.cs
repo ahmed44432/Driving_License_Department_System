@@ -310,7 +310,6 @@ namespace DVLD
         }
 
         st_info_image_chaine IICH;
-      
 
         private void lkbSetImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer;
 
 namespace DVLD.MainForms.MainRelatedForms
 {
@@ -15,6 +16,24 @@ namespace DVLD.MainForms.MainRelatedForms
         public AddUpdateUser()
         {
             InitializeComponent();
+            addingUser1.onGivingUserObj += setInfo;
+        }
+
+        private void setInfo(bool type)
+        {
+            if(!type)
+            {
+                lbAddUpdateUser.Text = "Add New User";
+            }
+            else
+            {
+                lbAddUpdateUser.Text = "Updating User";
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

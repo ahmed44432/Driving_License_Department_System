@@ -38,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnADD = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.cbxIsActive = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +69,8 @@
             this.textBox1.Size = new System.Drawing.Size(145, 22);
             this.textBox1.TabIndex = 12;
             this.textBox1.Visible = false;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // comboBox1
             // 
@@ -76,20 +79,16 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "None",
-            "ID",
-            "NationalNO",
-            "First Name",
-            "Second Name",
-            "Third Name",
-            "Last Name",
-            "Nationality",
-            "Gender",
-            "Phone",
-            "Email"});
+            "User ID",
+            "User Name",
+            "Person ID",
+            "Full Name",
+            "Is Active"});
             this.comboBox1.Location = new System.Drawing.Point(90, 165);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 11;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -142,11 +141,28 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Manage Users";
             // 
+            // cbxIsActive
+            // 
+            this.cbxIsActive.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxIsActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxIsActive.FormattingEnabled = true;
+            this.cbxIsActive.Items.AddRange(new object[] {
+            "ALL",
+            "YES",
+            "NO"});
+            this.cbxIsActive.Location = new System.Drawing.Point(242, 166);
+            this.cbxIsActive.Name = "cbxIsActive";
+            this.cbxIsActive.Size = new System.Drawing.Size(79, 23);
+            this.cbxIsActive.TabIndex = 17;
+            this.cbxIsActive.Visible = false;
+            this.cbxIsActive.SelectedIndexChanged += new System.EventHandler(this.cbxIsActive_SelectedIndexChanged);
+            // 
             // UsersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(662, 466);
+            this.Controls.Add(this.cbxIsActive);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnADD);
             this.Controls.Add(this.lbRecordNumbers);
@@ -177,5 +193,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnADD;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbxIsActive;
     }
 }

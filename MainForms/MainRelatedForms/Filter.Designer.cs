@@ -54,7 +54,7 @@
             this.comboBox1.Font = new System.Drawing.Font("Constantia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "ID",
+            "Person ID",
             "NationalNO",
             "First Name",
             "Second Name",
