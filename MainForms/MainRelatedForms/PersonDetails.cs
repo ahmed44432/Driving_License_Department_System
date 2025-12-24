@@ -67,7 +67,29 @@ namespace DVLD
                 _DefLabels();
                 return;
             }
+
+            // YOU SHOULDNT EDIT THIS TYPE OF USERS BUT I WILL ALLOW IT ;)
+
+            //clsUserBusinessLayer user =
+            //    clsUserBusinessLayer.GetUserByPersonID(person.ID);
+            //if (user != null && user.UserID != -1)
+            //{
+            //    if (clsUserBusinessLayer.IsUserLinked(user.UserID))
+            //    {
+            //        lkbEditPerson.Enabled = false;
+            //    }
+            //    else
+            //    {
+            //        lkbEditPerson.Enabled = true;
+            //    }
+            //}
+            //else
+            //{
+            //    lkbEditPerson.Enabled = true;
+            //}
+
             lkbEditPerson.Enabled = true;
+
             _person = person;
             lbName.Text =
                person.FirstName + " " + person.SecondName + " " + person.ThirdName

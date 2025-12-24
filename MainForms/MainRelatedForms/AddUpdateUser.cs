@@ -19,6 +19,14 @@ namespace DVLD.MainForms.MainRelatedForms
             addingUser1.onGivingUserObj += setInfo;
         }
 
+        public AddUpdateUser(clsUserBusinessLayer user)
+        {
+            InitializeComponent();
+            lbAddUpdateUser.Text = "Updating User";
+            addingUser1.setInfo(user);
+            addingUser1.onGivingUserObj += setInfo;
+        }
+
         private void setInfo(bool type)
         {
             if(!type)

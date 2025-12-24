@@ -177,7 +177,7 @@
             // btnADD
             // 
             this.btnADD.Image = ((System.Drawing.Image)(resources.GetObject("btnADD.Image")));
-            this.btnADD.Location = new System.Drawing.Point(989, 123);
+            this.btnADD.Location = new System.Drawing.Point(983, 137);
             this.btnADD.Name = "btnADD";
             this.btnADD.Size = new System.Drawing.Size(31, 32);
             this.btnADD.TabIndex = 4;

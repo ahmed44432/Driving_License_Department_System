@@ -19,6 +19,7 @@ namespace DVLD.MainForms.MainRelatedForms
             InitializeComponent();
             dgvUsers.ReadOnly = true;
             dgvUsers.AllowUserToAddRows = false;
+            dgvUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             comboBox1.SelectedIndex = 0;
             cbxIsActive.SelectedIndex = 0;
@@ -157,6 +158,77 @@ namespace DVLD.MainForms.MainRelatedForms
                       clsUserBusinessLayer.
                       GetUsersByActivationStatus(false);
             }
+        }
+
+        private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int userid =
+                  Convert.ToInt32(dgvUsers.SelectedRows[0].Cells["User ID"].Value);
+            UserInformation userInformation = new UserInformation(userid);
+            userInformation.StartPosition = FormStartPosition.CenterScreen;
+            userInformation.AutoScaleMode = AutoScaleMode.None;
+            userInformation.ShowDialog();
+            _RefreshUsersList();
+        }
+
+        private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddUpdateUser addinguser = new AddUpdateUser();
+            addinguser.StartPosition = FormStartPosition.CenterScreen;
+            addinguser.AutoScaleMode = AutoScaleMode.None;
+            addinguser.ShowDialog();
+            _RefreshUsersList();
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int userid =
+                  Convert.ToInt32(dgvUsers.SelectedRows[0].Cells["User ID"].Value);
+            clsUserBusinessLayer user = clsUserBusinessLayer.GetUserByUserID(userid);
+            AddUpdateUser addUpdateUser = new AddUpdateUser(user);
+            addUpdateUser.StartPosition = FormStartPosition.CenterScreen;
+            addUpdateUser.AutoScaleMode = AutoScaleMode.None;
+            addUpdateUser.ShowDialog();
+            _RefreshUsersList();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            int userid =
+                   Convert.ToInt32(dgvUsers.SelectedRows[0].Cells["User ID"].Value);
+
+            if (clsUserBusinessLayer.IsUserLinked(userid))
+            {
+                MessageBox.Show(
+               @"This User cannot be deleted because it is linked to existing records in the system."
+                   , "special person", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                return;
+            }
+
+            if (
+                MessageBox.Show("Are you sure you want to delete this User", "Delete",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes
+                )
+            {
+
+                clsUserBusinessLayer.DeleteUser(userid);
+                _RefreshUsersList();
+                lbRecordNumbers.Text = dgvUsers.RowCount.ToString();
+            }
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int userid =
+                  Convert.ToInt32(dgvUsers.SelectedRows[0].Cells["User ID"].Value);
+            clsUserBusinessLayer user = clsUserBusinessLayer.GetUserByUserID(userid);
+            ChangePassword changePassword = new ChangePassword(user);
+            changePassword.StartPosition = FormStartPosition.CenterScreen;
+            changePassword.AutoScaleMode = AutoScaleMode.None;
+            changePassword.ShowDialog();
+            _RefreshUsersList();
         }
     }
 }

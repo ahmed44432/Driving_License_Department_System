@@ -13,6 +13,7 @@ namespace DVLD.MainRelatedForms
             InitializeComponent();
             dgvPeopleList.ReadOnly = true;
             dgvPeopleList.AllowUserToAddRows = false;
+            dgvPeopleList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             _RefreshPeopleList();
             dgvPeopleList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             comboBox1.SelectedIndex = 0;
@@ -160,14 +161,17 @@ namespace DVLD.MainRelatedForms
 
             int personID =
                    Convert.ToInt32(dgvPeopleList.SelectedRows[0].Cells["PersonID"].Value);
-
-            if (clsUserBusinessLayer.IsUserLinked(personID))
+            clsUserBusinessLayer user = clsUserBusinessLayer.GetUserByPersonID(personID);
+            if (user != null && user.UserID != -1)
             {
-                MessageBox.Show(
-               @"This Person cannot be deleted because it is linked to existing records in the system."
-                   ,"special person",MessageBoxButtons.OK , MessageBoxIcon.Information);
-    
-                return;
+                if (clsUserBusinessLayer.IsUserLinked(personID))
+                {
+                    MessageBox.Show(
+                   @"This Person cannot be deleted because it is linked to existing records in the system."
+                       , "special person", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    return;
+                }
             }
 
             if (
@@ -196,6 +200,19 @@ namespace DVLD.MainRelatedForms
             }
             int personID =
                    Convert.ToInt32(dgvPeopleList.SelectedRows[0].Cells["PersonID"].Value);
+
+            //clsUserBusinessLayer user = clsUserBusinessLayer.GetUserByPersonID(personID);
+            //if (user != null && user.UserID != -1)
+            //{
+            //    if (clsUserBusinessLayer.IsUserLinked(personID))
+            //    {
+            //        MessageBox.Show(
+            //       @"This Person cannot be Edited because it is linked to existing records in the system."
+            //           , "special person", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            //        return;
+            //    }
+            //}
             AddEditPerson addEditPerson = new AddEditPerson(personID);
             addEditPerson.StartPosition = FormStartPosition.CenterScreen;
             addEditPerson.AutoScaleMode = AutoScaleMode.None;

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
+using DVLD.MainRelatedForms;
 
 namespace DVLD.MainForms.MainRelatedForms
 {
@@ -27,9 +28,19 @@ namespace DVLD.MainForms.MainRelatedForms
             comboBox1.SelectedIndex = 0;
         }
 
+        public void showInTextBox(string text)
+        {
+            textBox1.Text = text;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             FilterDataBack?.Invoke(_person);
+        }
+
+        private void _setPersonInfo(clsPeopleBusinessLayer person)
+        {
+            _person = person;
         }
 
         enum ComboboxItemsNumber
@@ -89,6 +100,19 @@ namespace DVLD.MainForms.MainRelatedForms
             {
                 e.Handled = false;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AddEditPerson addEditPerson = new AddEditPerson();
+            addEditPerson.StartPosition = FormStartPosition.CenterScreen;
+            addEditPerson.AutoScaleMode = AutoScaleMode.None;
+            addEditPerson.OnInfo += _setPersonInfo;
+            addEditPerson.ShowDialog();
+            FilterDataBack?.Invoke(_person);
+            if(_person ==  null || _person.ID == -1) 
+            { return; }
+            textBox1.Text = _person.ID.ToString();
         }
     }
 }

@@ -29,6 +29,25 @@ namespace DVLD.MainForms.MainRelatedForms
         bool _lockLoginTab = true;
         bool Type = false; //false = Add Mode; True = Update Mode;
 
+        public void setInfo(clsUserBusinessLayer user)
+        {
+            _user = user;
+            _person = clsPeopleBusinessLayer.GetPersonByID(user.PersonID);
+            personDetails1.setinfo(_person);
+            _lockLoginTab = false;
+            lbUserID.Text = _user.PersonID.ToString();
+            txbUserName.Text = _user.UserName;
+            txbPassword.Text = _user.Password;
+            txbConfirmPassword.Text = _user.Password;
+            chkbIsActive.Checked = _user.IsActive;
+            //Alltabs.SelectedTab = tabLoginInfo;
+            onGivingUserObj?.Invoke(true);
+            filter1.Enabled = false;
+            filter1.showInTextBox(user.PersonID.ToString());
+            
+            return;
+        }
+
         public void DataResever (clsPeopleBusinessLayer person)
         {
             personDetails1.setinfo(person);
@@ -96,6 +115,16 @@ namespace DVLD.MainForms.MainRelatedForms
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+
+            if (_person == null || _person.ID == -1)
+            {
+                Alltabs.SelectedTab = tabPersonalInfo;
+                _lockLoginTab = true;
+                lbUserID.Text = "???";
+                onGivingUserObj?.Invoke(false);
+                return;
+            }
+
             if (clsUserBusinessLayer.IsUserLinked(_person.ID))
             {
                 Alltabs.SelectedTab = tabPersonalInfo;
@@ -124,15 +153,7 @@ namespace DVLD.MainForms.MainRelatedForms
                 return;
             }
 
-            if (_person == null || _person.ID == -1)
-            {
-                Alltabs.SelectedTab = tabPersonalInfo;
-                _lockLoginTab = true;
-                lbUserID.Text = "???";
-                onGivingUserObj?.Invoke(false);
-                return;
-            }
-
+         
             if (_person.ID != -1) {
 
                 _lockLoginTab = false;
@@ -168,7 +189,12 @@ namespace DVLD.MainForms.MainRelatedForms
                             , MessageBoxIcon.Error);
                         
                     }
-                    
+
+                }
+                else
+                {
+                    MessageBox.Show("User Saved Failed", "", MessageBoxButtons.OK
+                           , MessageBoxIcon.Error);
                 }
 
             }

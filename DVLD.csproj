@@ -100,6 +100,12 @@
     <Compile Include="MainForms\MainRelatedForms\AddUpdateUser.Designer.cs">
       <DependentUpon>AddUpdateUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForms\MainRelatedForms\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForms\MainRelatedForms\Filter.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -123,6 +129,18 @@
     </Compile>
     <Compile Include="MainForms\MainRelatedForms\PersonInformation.Designer.cs">
       <DependentUpon>PersonInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\UserDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\UserDetails.Designer.cs">
+      <DependentUpon>UserDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\UserInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\UserInformation.Designer.cs">
+      <DependentUpon>UserInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForms\MainRelatedForms\UsersForm.cs">
       <SubType>Form</SubType>
@@ -153,6 +171,9 @@
     <EmbeddedResource Include="MainForms\MainRelatedForms\AddUpdateUser.resx">
       <DependentUpon>AddUpdateUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\MainRelatedForms\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForms\MainRelatedForms\Filter.resx">
       <DependentUpon>Filter.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +185,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\MainRelatedForms\PersonInformation.resx">
       <DependentUpon>PersonInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\MainRelatedForms\UserDetails.resx">
+      <DependentUpon>UserDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\MainRelatedForms\UserInformation.resx">
+      <DependentUpon>UserInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\MainRelatedForms\UsersForm.resx">
       <DependentUpon>UsersForm.cs</DependentUpon>
