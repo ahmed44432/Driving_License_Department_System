@@ -20,6 +20,12 @@ namespace DVLD
 
         }
 
+        public delegate void GetUser(clsUserBusinessLayer user);
+        public event GetUser GetUserInfo;
+
+
+        public clsUserBusinessLayer _user;
+
         private void LoginScreen_Load(object sender, EventArgs e)
         {
             ReturnRecourd(path);
@@ -98,9 +104,16 @@ namespace DVLD
                             MessageBoxButtons.OK,MessageBoxIcon.Error);
                         return;
                     }
-
+                    clsUserBusinessLayer user =
+                        clsUserBusinessLayer.GetUserByUserName(txbUN.Text);
+                    _user = user;
+                    // عند نجاح تسجيل الدخول
+                    
+                    GetUserInfo?.Invoke(_user);
                     MessageBox.Show("welcome :)");
-                    if(chkRM.Checked)
+                   
+
+                    if (chkRM.Checked)
                     {
                         File.WriteAllText(path, string.Empty);
                         AddRecourdInFile(path, txbUN.Text, txbPS.Text);

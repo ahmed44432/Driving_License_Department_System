@@ -75,6 +75,7 @@
             this.Controls.Add(this.lbAddUpdateUser);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.addingUser1);
+            this.MaximizeBox = false;
             this.Name = "AddUpdateUser";
             this.Text = "AddUpdateUser";
             this.ResumeLayout(false);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer;
 using DVLD.MainForms.MainRelatedForms;
 using DVLD.MainRelatedForms;
 
@@ -14,13 +15,19 @@ namespace DVLD
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        public MainForm(clsUserBusinessLayer user)
         {
             InitializeComponent();
-            
+            _user = user;
         }
 
         public bool LogoutRequested = false;
+        clsUserBusinessLayer _user;
+
+        public void setUser(clsUserBusinessLayer user)
+        {
+            _user = user;
+        }
 
         private void tspmiPeople_Click(object sender, EventArgs e)
         {
@@ -61,6 +68,34 @@ namespace DVLD
             UsersForm usersForm = new UsersForm();
             usersForm.StartPosition = FormStartPosition.CenterScreen;
             usersForm.ShowDialog();
+        }
+
+        private void currentUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UserInformation userInformation = new UserInformation(_user);
+            userInformation.StartPosition = FormStartPosition.CenterScreen;
+            userInformation.ShowDialog();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePassword changePassword = new ChangePassword(_user);
+            changePassword.StartPosition = FormStartPosition.CenterScreen;
+            changePassword.ShowDialog();
+        }
+
+        private void manageApplicationTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageApplicationTypesForm appTypes = new ManageApplicationTypesForm();
+            appTypes.StartPosition = FormStartPosition.CenterScreen;
+            appTypes.ShowDialog();
+        }
+
+        private void manageTestTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageTestTypes manageTestTypes = new ManageTestTypes();
+            manageTestTypes.StartPosition = FormStartPosition.CenterScreen;
+            manageTestTypes.ShowDialog();
         }
     }
     

@@ -44,6 +44,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(672, 365);
             this.Controls.Add(this.userDetails1);
+            this.MaximizeBox = false;
             this.Name = "UserInformation";
             this.Text = "UserInformation";
             this.ResumeLayout(false);

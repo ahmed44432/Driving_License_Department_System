@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer;
 
 namespace DVLD
 {
@@ -17,17 +18,25 @@ namespace DVLD
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-       
+            clsUserBusinessLayer _user= new clsUserBusinessLayer(); 
+            void setinfo(clsUserBusinessLayer user)
+            {
+                _user = user;
+            }
 
             while (true)
             {
                 using (LoginScreen loginScreen = new LoginScreen())
                 {
                     loginScreen.StartPosition = FormStartPosition.CenterScreen;
+                    loginScreen.GetUserInfo += setinfo;
                     if (loginScreen.ShowDialog() == DialogResult.OK)
                     {
-                        using (MainForm main = new MainForm())
+                        
+
+                        using (MainForm main = new MainForm(_user))
                         {
+                            
                             Application.Run(main);
 
                             if (main.LogoutRequested)
@@ -49,6 +58,10 @@ namespace DVLD
                     }
                 }
             }
+
+
+
+
         }
     }
 }

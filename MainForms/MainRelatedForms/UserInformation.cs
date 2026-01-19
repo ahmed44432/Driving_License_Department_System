@@ -20,5 +20,12 @@ namespace DVLD.MainForms.MainRelatedForms
             userDetails1.setUserInfo(user);
             
         }
+
+        public UserInformation(clsUserBusinessLayer user)
+        {
+            InitializeComponent();
+            userDetails1.setUserInfo(user);
+        }
+
     }
 }

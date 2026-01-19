@@ -27,7 +27,7 @@ namespace DVLD.MainForms.MainRelatedForms
         clsUserBusinessLayer _user = new clsUserBusinessLayer();
         clsPeopleBusinessLayer _person;
         bool _lockLoginTab = true;
-        bool Type = false; //false = Add Mode; True = Update Mode;
+       /* bool Type = false;*/ //false = Add Mode; True = Update Mode;
 
         public void setInfo(clsUserBusinessLayer user)
         {

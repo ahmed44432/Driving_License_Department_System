@@ -98,6 +98,7 @@
             this.Controls.Add(this.lbID);
             this.Controls.Add(this.lb2);
             this.Controls.Add(this.lbTitel);
+            this.MaximizeBox = false;
             this.Name = "AddEditPerson";
             this.Text = "AddEditPerson";
             this.ResumeLayout(false);

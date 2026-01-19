@@ -240,6 +240,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvPeopleList);
+            this.MaximizeBox = false;
             this.Name = "PeopleForm";
             this.Text = "PeopleForm";
             this.Load += new System.EventHandler(this.PeopleForm_Load);

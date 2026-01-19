@@ -112,6 +112,18 @@
     <Compile Include="MainForms\MainRelatedForms\Filter.Designer.cs">
       <DependentUpon>Filter.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForms\MainRelatedForms\ManageApplicationTypesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\ManageApplicationTypesForm.Designer.cs">
+      <DependentUpon>ManageApplicationTypesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\ManageTestTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\ManageTestTypes.Designer.cs">
+      <DependentUpon>ManageTestTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForms\MainRelatedForms\PeopleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +141,18 @@
     </Compile>
     <Compile Include="MainForms\MainRelatedForms\PersonInformation.Designer.cs">
       <DependentUpon>PersonInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\UpdateApplicationType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\UpdateApplicationType.Designer.cs">
+      <DependentUpon>UpdateApplicationType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\UpdateTestTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\UpdateTestTypes.Designer.cs">
+      <DependentUpon>UpdateTestTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForms\MainRelatedForms\UserDetails.cs">
       <SubType>UserControl</SubType>
@@ -177,6 +201,12 @@
     <EmbeddedResource Include="MainForms\MainRelatedForms\Filter.resx">
       <DependentUpon>Filter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\MainRelatedForms\ManageApplicationTypesForm.resx">
+      <DependentUpon>ManageApplicationTypesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\MainRelatedForms\ManageTestTypes.resx">
+      <DependentUpon>ManageTestTypes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForms\MainRelatedForms\PeopleForm.resx">
       <DependentUpon>PeopleForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +215,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\MainRelatedForms\PersonInformation.resx">
       <DependentUpon>PersonInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\MainRelatedForms\UpdateApplicationType.resx">
+      <DependentUpon>UpdateApplicationType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\MainRelatedForms\UpdateTestTypes.resx">
+      <DependentUpon>UpdateTestTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\MainRelatedForms\UserDetails.resx">
       <DependentUpon>UserDetails.cs</DependentUpon>
