@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsersForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -55,7 +54,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::DVLD.Properties.Resources.human_resources128;
             this.pictureBox1.Location = new System.Drawing.Point(278, -11);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(128, 128);
@@ -90,7 +89,7 @@
             // showDetailsToolStripMenuItem
             // 
             this.showDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showDetailsToolStripMenuItem.Image")));
+            this.showDetailsToolStripMenuItem.Image = global::DVLD.Properties.Resources.info24;
             this.showDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
             this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(192, 30);
@@ -100,7 +99,7 @@
             // addUserToolStripMenuItem
             // 
             this.addUserToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addUserToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addUserToolStripMenuItem.Image")));
+            this.addUserToolStripMenuItem.Image = global::DVLD.Properties.Resources.add24;
             this.addUserToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
             this.addUserToolStripMenuItem.Size = new System.Drawing.Size(192, 30);
@@ -110,7 +109,7 @@
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editToolStripMenuItem.Image")));
+            this.editToolStripMenuItem.Image = global::DVLD.Properties.Resources.edit24;
             this.editToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(192, 30);
@@ -119,7 +118,7 @@
             // 
             // deleteToolStripMenuItem
             // 
-            this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
+            this.deleteToolStripMenuItem.Image = global::DVLD.Properties.Resources.delete24;
             this.deleteToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(192, 30);
@@ -128,7 +127,7 @@
             // 
             // changePasswordToolStripMenuItem
             // 
-            this.changePasswordToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("changePasswordToolStripMenuItem.Image")));
+            this.changePasswordToolStripMenuItem.Image = global::DVLD.Properties.Resources.password24;
             this.changePasswordToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
             this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(192, 30);
@@ -137,7 +136,7 @@
             // 
             // sendEToolStripMenuItem
             // 
-            this.sendEToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sendEToolStripMenuItem.Image")));
+            this.sendEToolStripMenuItem.Image = global::DVLD.Properties.Resources.message24;
             this.sendEToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.sendEToolStripMenuItem.Name = "sendEToolStripMenuItem";
             this.sendEToolStripMenuItem.Size = new System.Drawing.Size(192, 30);
@@ -145,7 +144,7 @@
             // 
             // mailToolStripMenuItem
             // 
-            this.mailToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("mailToolStripMenuItem.Image")));
+            this.mailToolStripMenuItem.Image = global::DVLD.Properties.Resources.call24;
             this.mailToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mailToolStripMenuItem.Name = "mailToolStripMenuItem";
             this.mailToolStripMenuItem.Size = new System.Drawing.Size(192, 30);
@@ -212,7 +211,7 @@
             // 
             // btnADD
             // 
-            this.btnADD.Image = ((System.Drawing.Image)(resources.GetObject("btnADD.Image")));
+            this.btnADD.Image = global::DVLD.Properties.Resources.PLUS;
             this.btnADD.Location = new System.Drawing.Point(621, 159);
             this.btnADD.Name = "btnADD";
             this.btnADD.Size = new System.Drawing.Size(31, 32);

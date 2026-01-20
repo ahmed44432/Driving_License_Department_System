@@ -117,29 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnNext.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAZ5JREFUWEft
-        180rRUEcxvHrdWnjJQskZcfO1o4kScmGbG38IRaskMRC/A2WStlJYuNd3oVkLzZ8n3Jqmn5nztxz70bd
-        pz7dzG1+M2fOnHNHoZL/lDoMYx1HeMX336f+XsMQalH2TOIZPxHuMY6ypBE7sAbKso0G5E4vHmEVj3WF
-        LhSdTnzAKurS/b/12nx3aEJ06nEBq5hvA+3ImsQ+qhCVWVhF0uipaIOu1Po+MYHM6Oq1rFaBkCVoJUKT
-        OEFmRmF1jhGzEn0IZgtWx1hZk5hDMKewOhZDk0i7HbsI5h1+pzy0ktYk9LQE8wW3Q6nph1vvE8G8wO2Q
-        1zKsvfCEYA7hdsgjbXDRCymYVfidiqHBW5H2FCwimEFYHWMkg187bT7tiWB0mHiA1TlkHhr80mnz6Zex
-        GpmZgVUgzQKaEbpymUJUtAp6b1tFfNozLTh32iwHiLr6JB14g1XMpR+uM6/NpyOabk/R6YGeW6torBt0
-        I3d0ktmDVTxLyWdCN9OIfUvqfT+GskeHlRFs4hjaI8n/BdpkKxhADSqpJDKFwi/V0L7XMPxYjQAAAABJ
-        RU5ErkJggg==
-</value>
-  </data>
-  <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAK1JREFUWEft
-        lU0KwjAUhHMTPaALvagL9QZ6CxftTCWhhL4fHg1d+D4YaDLzklkUUpJkgwc07awr5IYDEpq3Zp07QR/o
-        sqwcRAvQq36fY4k3dFtWBiMKkDP0/X3qjCpAtPmGdYkEvepLOW2+YV0iQa/6Uk6bb1iXeBhW4AnRt3SH
-        tqBn4goFyQKhAi+IexH1/wL3TPqQa0ggdFYWyAJZIAscXsD75EYkPdPJ31LKDJBun44dP3SpAAAAAElF
-        TkSuQmCC
-</value>
-  </data>
   <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

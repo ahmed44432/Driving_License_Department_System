@@ -47,8 +47,7 @@ namespace DVLD
             lbPhone.Text = "[????]";
             lbDateOfBirth.Text = "[????]";
             lbCountry.Text = "[????]";
-            string path = @"C:\Users\DELL\Pictures\person_man.png";
-            pictureBox1.Image = Image.FromFile(path);
+            pictureBox1.Image = Properties.Resources.person_man;
             lkbEditPerson.Enabled = false;
             
             
@@ -113,13 +112,11 @@ namespace DVLD
             {
                 if (person.Gender == 'F')
                 {
-                    string path = @"C:\Users\DELL\Pictures\person_woman.png";
-                    pictureBox1.Image = Image.FromFile(path);
+                    pictureBox1.Image = Properties.Resources.person_woman;
                 }
                 else
                 {
-                    string path = @"C:\Users\DELL\Pictures\person_man.png";
-                    pictureBox1.Image = Image.FromFile(path);
+                    pictureBox1.Image = Properties.Resources.person_man;
                 }
             }
 

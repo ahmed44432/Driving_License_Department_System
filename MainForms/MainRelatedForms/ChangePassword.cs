@@ -25,30 +25,34 @@ namespace DVLD.MainForms.MainRelatedForms
         private bool _ConfirmingPassword()
         {
             if (_user == null || _user.UserID == -1) { return false; }
+
+
             if (string.IsNullOrWhiteSpace(txbCurrentPassword.Text) ||
-                txbCurrentPassword.Text != _user.Password) {
-                errorProvider1
-                    .SetError(txbCurrentPassword, "Password is incorrect !");
+                txbCurrentPassword.Text != _user.Password)
+            {
+                errorProvider1.SetError(txbCurrentPassword, "Password is incorrect!");
                 return false;
             }
             else
             {
                 errorProvider1.SetError(txbCurrentPassword, "");
-                return true;
             }
 
+            
             if (string.IsNullOrWhiteSpace(txbConfirmPassword.Text) ||
-                (txbNewPassword.Text != txbConfirmPassword.Text))
+                txbNewPassword.Text != txbConfirmPassword.Text)
             {
-                errorProvider1
-                    .SetError(txbConfirmPassword, "Password Unmatched Or Empty");
+                errorProvider1.SetError(txbConfirmPassword, "Password Unmatched Or Empty");
                 return false;
             }
             else
             {
                 errorProvider1.SetError(txbConfirmPassword, "");
-                return true;
             }
+
+           
+            return true;
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)

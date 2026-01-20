@@ -239,6 +239,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -260,7 +261,159 @@
       <Name>BusinessLayer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\account_settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add agent32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ADD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agent32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\call24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diskette32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_config24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find_person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fluent-color--people-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grock-test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hand24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hole io.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\human_resources72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\human_resources128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\message24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papers24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pc1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_woman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PLUS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\serching.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_out16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_out24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test_config24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test-management.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\driver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FileManager512.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Web.WebView2.1.0.3537.50\build\Microsoft.Web.WebView2.targets" Condition="Exists('packages\Microsoft.Web.WebView2.1.0.3537.50\build\Microsoft.Web.WebView2.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

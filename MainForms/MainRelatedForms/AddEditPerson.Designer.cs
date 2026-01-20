@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEditPerson));
             this.lbTitel = new System.Windows.Forms.Label();
             this.lb2 = new System.Windows.Forms.Label();
             this.lbID = new System.Windows.Forms.Label();
@@ -69,7 +68,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImage = global::DVLD.Properties.Resources.close;
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClose.Location = new System.Drawing.Point(675, 14);
             this.btnClose.Name = "btnClose";

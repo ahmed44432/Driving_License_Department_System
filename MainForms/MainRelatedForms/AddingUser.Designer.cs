@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddingUser));
             this.Alltabs = new System.Windows.Forms.TabControl();
             this.tabPersonalInfo = new System.Windows.Forms.TabPage();
             this.btnNext = new System.Windows.Forms.Button();
+            this.personDetails1 = new DVLD.PersonDetails();
+            this.filter1 = new DVLD.MainForms.MainRelatedForms.Filter();
             this.tabLoginInfo = new System.Windows.Forms.TabPage();
             this.chkbIsActive = new System.Windows.Forms.CheckBox();
             this.txbConfirmPassword = new System.Windows.Forms.TextBox();
@@ -45,8 +46,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.personDetails1 = new DVLD.PersonDetails();
-            this.filter1 = new DVLD.MainForms.MainRelatedForms.Filter();
             this.Alltabs.SuspendLayout();
             this.tabPersonalInfo.SuspendLayout();
             this.tabLoginInfo.SuspendLayout();
@@ -79,7 +78,7 @@
             // btnNext
             // 
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
+            this.btnNext.Image = global::DVLD.Properties.Resources.arrow_right32;
             this.btnNext.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNext.Location = new System.Drawing.Point(619, 374);
             this.btnNext.Name = "btnNext";
@@ -88,6 +87,24 @@
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // personDetails1
+            // 
+            this.personDetails1.BackColor = System.Drawing.Color.SeaShell;
+            this.personDetails1.Location = new System.Drawing.Point(59, 112);
+            this.personDetails1.Margin = new System.Windows.Forms.Padding(4);
+            this.personDetails1.Name = "personDetails1";
+            this.personDetails1.Size = new System.Drawing.Size(651, 255);
+            this.personDetails1.TabIndex = 1;
+            // 
+            // filter1
+            // 
+            this.filter1.BackColor = System.Drawing.Color.Linen;
+            this.filter1.Location = new System.Drawing.Point(100, 23);
+            this.filter1.Margin = new System.Windows.Forms.Padding(4);
+            this.filter1.Name = "filter1";
+            this.filter1.Size = new System.Drawing.Size(557, 71);
+            this.filter1.TabIndex = 0;
             // 
             // tabLoginInfo
             // 
@@ -195,7 +212,7 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.White;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.Image = global::DVLD.Properties.Resources.diskette32;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.Location = new System.Drawing.Point(670, 452);
             this.btnSave.Name = "btnSave";
@@ -208,24 +225,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // personDetails1
-            // 
-            this.personDetails1.BackColor = System.Drawing.Color.SeaShell;
-            this.personDetails1.Location = new System.Drawing.Point(59, 112);
-            this.personDetails1.Margin = new System.Windows.Forms.Padding(4);
-            this.personDetails1.Name = "personDetails1";
-            this.personDetails1.Size = new System.Drawing.Size(651, 255);
-            this.personDetails1.TabIndex = 1;
-            // 
-            // filter1
-            // 
-            this.filter1.BackColor = System.Drawing.Color.Linen;
-            this.filter1.Location = new System.Drawing.Point(100, 23);
-            this.filter1.Margin = new System.Windows.Forms.Padding(4);
-            this.filter1.Name = "filter1";
-            this.filter1.Size = new System.Drawing.Size(557, 71);
-            this.filter1.TabIndex = 0;
             // 
             // AddingUser
             // 

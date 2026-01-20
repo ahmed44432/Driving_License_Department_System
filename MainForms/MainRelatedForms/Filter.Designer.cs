@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Filter));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -77,7 +76,7 @@
             // 
             // button1
             // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Image = global::DVLD.Properties.Resources.agent32;
             this.button1.Location = new System.Drawing.Point(436, 15);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(39, 34);
@@ -87,7 +86,7 @@
             // 
             // button2
             // 
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Image = global::DVLD.Properties.Resources.Add_agent32;
             this.button2.Location = new System.Drawing.Point(498, 15);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(39, 34);

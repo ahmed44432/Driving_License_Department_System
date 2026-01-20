@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PeopleForm));
             this.dgvPeopleList = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,7 +77,7 @@
             // showDetailsToolStripMenuItem
             // 
             this.showDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showDetailsToolStripMenuItem.Image")));
+            this.showDetailsToolStripMenuItem.Image = global::DVLD.Properties.Resources.info24;
             this.showDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
             this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(186, 30);
@@ -88,7 +87,7 @@
             // addPersonToolStripMenuItem
             // 
             this.addPersonToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addPersonToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addPersonToolStripMenuItem.Image")));
+            this.addPersonToolStripMenuItem.Image = global::DVLD.Properties.Resources.add24;
             this.addPersonToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.addPersonToolStripMenuItem.Name = "addPersonToolStripMenuItem";
             this.addPersonToolStripMenuItem.Size = new System.Drawing.Size(186, 30);
@@ -98,7 +97,7 @@
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editToolStripMenuItem.Image")));
+            this.editToolStripMenuItem.Image = global::DVLD.Properties.Resources.edit24;
             this.editToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(186, 30);
@@ -107,7 +106,7 @@
             // 
             // deleteToolStripMenuItem
             // 
-            this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
+            this.deleteToolStripMenuItem.Image = global::DVLD.Properties.Resources.delete24;
             this.deleteToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(186, 30);
@@ -116,7 +115,7 @@
             // 
             // sendEToolStripMenuItem
             // 
-            this.sendEToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sendEToolStripMenuItem.Image")));
+            this.sendEToolStripMenuItem.Image = global::DVLD.Properties.Resources.message24;
             this.sendEToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.sendEToolStripMenuItem.Name = "sendEToolStripMenuItem";
             this.sendEToolStripMenuItem.Size = new System.Drawing.Size(186, 30);
@@ -124,7 +123,7 @@
             // 
             // mailToolStripMenuItem
             // 
-            this.mailToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("mailToolStripMenuItem.Image")));
+            this.mailToolStripMenuItem.Image = global::DVLD.Properties.Resources.call24;
             this.mailToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mailToolStripMenuItem.Name = "mailToolStripMenuItem";
             this.mailToolStripMenuItem.Size = new System.Drawing.Size(186, 30);
@@ -176,7 +175,7 @@
             // 
             // btnADD
             // 
-            this.btnADD.Image = ((System.Drawing.Image)(resources.GetObject("btnADD.Image")));
+            this.btnADD.Image = global::DVLD.Properties.Resources.PLUS;
             this.btnADD.Location = new System.Drawing.Point(983, 137);
             this.btnADD.Name = "btnADD";
             this.btnADD.Size = new System.Drawing.Size(31, 32);
@@ -206,7 +205,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::DVLD.Properties.Resources.fluent_color__people_16;
             this.pictureBox1.Location = new System.Drawing.Point(458, -14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(128, 128);

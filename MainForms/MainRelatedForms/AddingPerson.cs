@@ -356,9 +356,9 @@ namespace DVLD
             if (string.IsNullOrEmpty(person.ImagePath)
                 || (lkbRemoveImage.Visible == false))
             {
-                string path = @"C:\Users\DELL\Pictures\person_man.png";
-                pictureBox1.Image = Image.FromFile(path);
-                //pictureBox1.ImageLocation = path;  
+
+                pictureBox1.Image = Properties.Resources.person_man;
+                
             }
             
         }
@@ -368,9 +368,9 @@ namespace DVLD
             if (string.IsNullOrEmpty(person.ImagePath) 
                 || (lkbRemoveImage.Visible == false))
             {
-                string path = @"C:\Users\DELL\Pictures\person_woman.png";
-                pictureBox1.Image = Image.FromFile(path);
-                //pictureBox1.ImageLocation = path;  
+
+                pictureBox1.Image = Properties.Resources.person_woman;
+               
             }
         }
 
@@ -378,13 +378,11 @@ namespace DVLD
         {
             if (rbMALE.Checked)
             {
-                string path = @"C:\Users\DELL\Pictures\person_man.png";
-                pictureBox1.Image = Image.FromFile(path);
+                pictureBox1.Image = Properties.Resources.person_man;
             }
             else
             {
-                string path = @"C:\Users\DELL\Pictures\person_woman.png";
-                pictureBox1.Image = Image.FromFile(path);
+                pictureBox1.Image = Properties.Resources.person_woman;
             }
 
             lkbRemoveImage.Visible = false;
@@ -393,6 +391,8 @@ namespace DVLD
             IICH._destinationPath = "";
 
         }
+
+
     }
 
 

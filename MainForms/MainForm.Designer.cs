@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tspmiApplication = new System.Windows.Forms.ToolStripMenuItem();
             this.drivingLicensesServicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,7 +70,7 @@
             this.detainLicensesToolStripMenuItem,
             this.manageApplicationTypesToolStripMenuItem,
             this.manageTestTypesToolStripMenuItem});
-            this.tspmiApplication.Image = ((System.Drawing.Image)(resources.GetObject("tspmiApplication.Image")));
+            this.tspmiApplication.Image = global::DVLD.Properties.Resources.file;
             this.tspmiApplication.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.tspmiApplication.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspmiApplication.Name = "tspmiApplication";
@@ -80,7 +79,7 @@
             // 
             // drivingLicensesServicesToolStripMenuItem
             // 
-            this.drivingLicensesServicesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("drivingLicensesServicesToolStripMenuItem.Image")));
+            this.drivingLicensesServicesToolStripMenuItem.Image = global::DVLD.Properties.Resources.id24;
             this.drivingLicensesServicesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.drivingLicensesServicesToolStripMenuItem.Name = "drivingLicensesServicesToolStripMenuItem";
             this.drivingLicensesServicesToolStripMenuItem.Size = new System.Drawing.Size(323, 38);
@@ -88,7 +87,7 @@
             // 
             // manageApplicationsToolStripMenuItem
             // 
-            this.manageApplicationsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("manageApplicationsToolStripMenuItem.Image")));
+            this.manageApplicationsToolStripMenuItem.Image = global::DVLD.Properties.Resources.papers24;
             this.manageApplicationsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.manageApplicationsToolStripMenuItem.Name = "manageApplicationsToolStripMenuItem";
             this.manageApplicationsToolStripMenuItem.Size = new System.Drawing.Size(323, 38);
@@ -96,7 +95,7 @@
             // 
             // detainLicensesToolStripMenuItem
             // 
-            this.detainLicensesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("detainLicensesToolStripMenuItem.Image")));
+            this.detainLicensesToolStripMenuItem.Image = global::DVLD.Properties.Resources.hand24;
             this.detainLicensesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.detainLicensesToolStripMenuItem.Name = "detainLicensesToolStripMenuItem";
             this.detainLicensesToolStripMenuItem.Size = new System.Drawing.Size(323, 38);
@@ -104,7 +103,7 @@
             // 
             // manageApplicationTypesToolStripMenuItem
             // 
-            this.manageApplicationTypesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("manageApplicationTypesToolStripMenuItem.Image")));
+            this.manageApplicationTypesToolStripMenuItem.Image = global::DVLD.Properties.Resources.file_config24;
             this.manageApplicationTypesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.manageApplicationTypesToolStripMenuItem.Name = "manageApplicationTypesToolStripMenuItem";
             this.manageApplicationTypesToolStripMenuItem.Size = new System.Drawing.Size(323, 38);
@@ -113,7 +112,7 @@
             // 
             // manageTestTypesToolStripMenuItem
             // 
-            this.manageTestTypesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("manageTestTypesToolStripMenuItem.Image")));
+            this.manageTestTypesToolStripMenuItem.Image = global::DVLD.Properties.Resources.test_config24;
             this.manageTestTypesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.manageTestTypesToolStripMenuItem.Name = "manageTestTypesToolStripMenuItem";
             this.manageTestTypesToolStripMenuItem.Size = new System.Drawing.Size(323, 38);
@@ -123,7 +122,7 @@
             // tspmiPeople
             // 
             this.tspmiPeople.BackColor = System.Drawing.Color.Gray;
-            this.tspmiPeople.Image = ((System.Drawing.Image)(resources.GetObject("tspmiPeople.Image")));
+            this.tspmiPeople.Image = global::DVLD.Properties.Resources.Find_person;
             this.tspmiPeople.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspmiPeople.Name = "tspmiPeople";
             this.tspmiPeople.Size = new System.Drawing.Size(121, 52);
@@ -132,7 +131,7 @@
             // 
             // tspmiDrivers
             // 
-            this.tspmiDrivers.Image = ((System.Drawing.Image)(resources.GetObject("tspmiDrivers.Image")));
+            this.tspmiDrivers.Image = global::DVLD.Properties.Resources.driver;
             this.tspmiDrivers.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspmiDrivers.Name = "tspmiDrivers";
             this.tspmiDrivers.Size = new System.Drawing.Size(131, 52);
@@ -140,7 +139,7 @@
             // 
             // tspmiUsers
             // 
-            this.tspmiUsers.Image = ((System.Drawing.Image)(resources.GetObject("tspmiUsers.Image")));
+            this.tspmiUsers.Image = global::DVLD.Properties.Resources.users;
             this.tspmiUsers.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspmiUsers.Name = "tspmiUsers";
             this.tspmiUsers.Size = new System.Drawing.Size(118, 52);
@@ -153,7 +152,7 @@
             this.currentUserInfoToolStripMenuItem,
             this.changePasswordToolStripMenuItem,
             this.tsmiSignOut});
-            this.tspmiAccountSettings.Image = ((System.Drawing.Image)(resources.GetObject("tspmiAccountSettings.Image")));
+            this.tspmiAccountSettings.Image = global::DVLD.Properties.Resources.account_settings;
             this.tspmiAccountSettings.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspmiAccountSettings.Name = "tspmiAccountSettings";
             this.tspmiAccountSettings.Size = new System.Drawing.Size(213, 52);
@@ -161,7 +160,7 @@
             // 
             // currentUserInfoToolStripMenuItem
             // 
-            this.currentUserInfoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("currentUserInfoToolStripMenuItem.Image")));
+            this.currentUserInfoToolStripMenuItem.Image = global::DVLD.Properties.Resources.account24;
             this.currentUserInfoToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.currentUserInfoToolStripMenuItem.Name = "currentUserInfoToolStripMenuItem";
             this.currentUserInfoToolStripMenuItem.Size = new System.Drawing.Size(241, 30);
@@ -170,7 +169,7 @@
             // 
             // changePasswordToolStripMenuItem
             // 
-            this.changePasswordToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("changePasswordToolStripMenuItem.Image")));
+            this.changePasswordToolStripMenuItem.Image = global::DVLD.Properties.Resources.password24;
             this.changePasswordToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
             this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(241, 30);
@@ -179,7 +178,7 @@
             // 
             // tsmiSignOut
             // 
-            this.tsmiSignOut.Image = ((System.Drawing.Image)(resources.GetObject("tsmiSignOut.Image")));
+            this.tsmiSignOut.Image = global::DVLD.Properties.Resources.sign_out24;
             this.tsmiSignOut.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmiSignOut.Name = "tsmiSignOut";
             this.tsmiSignOut.Size = new System.Drawing.Size(241, 30);
@@ -189,7 +188,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::DVLD.Properties.Resources.giphy;
             this.pictureBox1.Location = new System.Drawing.Point(300, 172);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 140);
