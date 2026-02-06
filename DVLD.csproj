@@ -58,10 +58,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainForms\MainRelatedForms\AddingPerson.cs">
+    <Compile Include="MainForms\MainRelatedForms\Application\ApplicationBasicInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\AddingPerson.Designer.cs">
+    <Compile Include="MainForms\MainRelatedForms\Application\ApplicationBasicInfo.Designer.cs">
+      <DependentUpon>ApplicationBasicInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\Application\LDLApplicationInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\Application\LDLApplicationInformation.Designer.cs">
+      <DependentUpon>LDLApplicationInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\Application\LocalLicenseApplicationDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\Application\LocalLicenseApplicationDetails.Designer.cs">
+      <DependentUpon>LocalLicenseApplicationDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\Application\ManageLocalLicenseApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\Application\ManageLocalLicenseApplications.Designer.cs">
+      <DependentUpon>ManageLocalLicenseApplications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\Application\NewLocalDrivingLicenseApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\Application\NewLocalDrivingLicenseApplication.Designer.cs">
+      <DependentUpon>NewLocalDrivingLicenseApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\People\AddingPerson.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\People\AddingPerson.Designer.cs">
       <DependentUpon>AddingPerson.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForms\Browser.cs">
@@ -82,99 +112,120 @@
     <Compile Include="MainForms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\AddEditPerson.cs">
+    <Compile Include="MainForms\MainRelatedForms\People\AddEditPerson.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\AddEditPerson.Designer.cs">
+    <Compile Include="MainForms\MainRelatedForms\People\AddEditPerson.Designer.cs">
       <DependentUpon>AddEditPerson.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\AddingUser.cs">
+    <Compile Include="MainForms\MainRelatedForms\Users\AddingUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\AddingUser.Designer.cs">
+    <Compile Include="MainForms\MainRelatedForms\Users\AddingUser.Designer.cs">
       <DependentUpon>AddingUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\AddUpdateUser.cs">
+    <Compile Include="MainForms\MainRelatedForms\Users\AddUpdateUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\AddUpdateUser.Designer.cs">
+    <Compile Include="MainForms\MainRelatedForms\Users\AddUpdateUser.Designer.cs">
       <DependentUpon>AddUpdateUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\ChangePassword.cs">
+    <Compile Include="MainForms\MainRelatedForms\Users\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\ChangePassword.Designer.cs">
+    <Compile Include="MainForms\MainRelatedForms\Users\ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\Filter.cs">
+    <Compile Include="MainForms\MainRelatedForms\People\Filter.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\Filter.Designer.cs">
+    <Compile Include="MainForms\MainRelatedForms\People\Filter.Designer.cs">
       <DependentUpon>Filter.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\ManageApplicationTypesForm.cs">
+    <Compile Include="MainForms\MainRelatedForms\Application\ManageApplicationTypesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\ManageApplicationTypesForm.Designer.cs">
+    <Compile Include="MainForms\MainRelatedForms\Application\ManageApplicationTypesForm.Designer.cs">
       <DependentUpon>ManageApplicationTypesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\ManageTestTypes.cs">
+    <Compile Include="MainForms\MainRelatedForms\Application\ManageTestTypes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\ManageTestTypes.Designer.cs">
+    <Compile Include="MainForms\MainRelatedForms\Application\ManageTestTypes.Designer.cs">
       <DependentUpon>ManageTestTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\PeopleForm.cs">
+    <Compile Include="MainForms\MainRelatedForms\People\PeopleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\PeopleForm.Designer.cs">
+    <Compile Include="MainForms\MainRelatedForms\People\PeopleForm.Designer.cs">
       <DependentUpon>PeopleForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\PersonDetails.cs">
+    <Compile Include="MainForms\MainRelatedForms\People\PersonDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\PersonDetails.Designer.cs">
+    <Compile Include="MainForms\MainRelatedForms\People\PersonDetails.Designer.cs">
       <DependentUpon>PersonDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\PersonInformation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForms\MainRelatedForms\PersonInformation.Designer.cs">
-      <DependentUpon>PersonInformation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainForms\MainRelatedForms\UpdateApplicationType.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForms\MainRelatedForms\UpdateApplicationType.Designer.cs">
-      <DependentUpon>UpdateApplicationType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainForms\MainRelatedForms\UpdateTestTypes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForms\MainRelatedForms\UpdateTestTypes.Designer.cs">
-      <DependentUpon>UpdateTestTypes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainForms\MainRelatedForms\UserDetails.cs">
+    <Compile Include="MainForms\MainRelatedForms\People\PersonFilter.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\UserDetails.Designer.cs">
+    <Compile Include="MainForms\MainRelatedForms\People\PersonFilter.Designer.cs">
+      <DependentUpon>PersonFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\People\PersonInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\People\PersonInformation.Designer.cs">
+      <DependentUpon>PersonInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\Application\UpdateApplicationType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\Application\UpdateApplicationType.Designer.cs">
+      <DependentUpon>UpdateApplicationType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\Application\UpdateTestTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\Application\UpdateTestTypes.Designer.cs">
+      <DependentUpon>UpdateTestTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\Users\UserDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\Users\UserDetails.Designer.cs">
       <DependentUpon>UserDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\UserInformation.cs">
+    <Compile Include="MainForms\MainRelatedForms\Users\UserInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\UserInformation.Designer.cs">
+    <Compile Include="MainForms\MainRelatedForms\Users\UserInformation.Designer.cs">
       <DependentUpon>UserInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\UsersForm.cs">
+    <Compile Include="MainForms\MainRelatedForms\Users\UsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\UsersForm.Designer.cs">
+    <Compile Include="MainForms\MainRelatedForms\Users\UsersForm.Designer.cs">
       <DependentUpon>UsersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainForms\MainRelatedForms\AddingPerson.resx">
+    <EmbeddedResource Include="MainForms\MainRelatedForms\Application\ApplicationBasicInfo.resx">
+      <DependentUpon>ApplicationBasicInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\MainRelatedForms\Application\LDLApplicationInformation.resx">
+      <DependentUpon>LDLApplicationInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\MainRelatedForms\Application\LocalLicenseApplicationDetails.resx">
+      <DependentUpon>LocalLicenseApplicationDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\MainRelatedForms\Application\ManageLocalLicenseApplications.resx">
+      <DependentUpon>ManageLocalLicenseApplications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\MainRelatedForms\Application\NewLocalDrivingLicenseApplication.resx">
+      <DependentUpon>NewLocalDrivingLicenseApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\MainRelatedForms\People\AddingPerson.resx">
       <DependentUpon>AddingPerson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\Browser.resx">
@@ -186,49 +237,52 @@
     <EmbeddedResource Include="MainForms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForms\MainRelatedForms\AddEditPerson.resx">
+    <EmbeddedResource Include="MainForms\MainRelatedForms\People\AddEditPerson.resx">
       <DependentUpon>AddEditPerson.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForms\MainRelatedForms\AddingUser.resx">
+    <EmbeddedResource Include="MainForms\MainRelatedForms\Users\AddingUser.resx">
       <DependentUpon>AddingUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForms\MainRelatedForms\AddUpdateUser.resx">
+    <EmbeddedResource Include="MainForms\MainRelatedForms\Users\AddUpdateUser.resx">
       <DependentUpon>AddUpdateUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForms\MainRelatedForms\ChangePassword.resx">
+    <EmbeddedResource Include="MainForms\MainRelatedForms\Users\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForms\MainRelatedForms\Filter.resx">
+    <EmbeddedResource Include="MainForms\MainRelatedForms\People\Filter.resx">
       <DependentUpon>Filter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForms\MainRelatedForms\ManageApplicationTypesForm.resx">
+    <EmbeddedResource Include="MainForms\MainRelatedForms\Application\ManageApplicationTypesForm.resx">
       <DependentUpon>ManageApplicationTypesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForms\MainRelatedForms\ManageTestTypes.resx">
+    <EmbeddedResource Include="MainForms\MainRelatedForms\Application\ManageTestTypes.resx">
       <DependentUpon>ManageTestTypes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForms\MainRelatedForms\PeopleForm.resx">
+    <EmbeddedResource Include="MainForms\MainRelatedForms\People\PeopleForm.resx">
       <DependentUpon>PeopleForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForms\MainRelatedForms\PersonDetails.resx">
+    <EmbeddedResource Include="MainForms\MainRelatedForms\People\PersonDetails.resx">
       <DependentUpon>PersonDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForms\MainRelatedForms\PersonInformation.resx">
+    <EmbeddedResource Include="MainForms\MainRelatedForms\People\PersonFilter.resx">
+      <DependentUpon>PersonFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\MainRelatedForms\People\PersonInformation.resx">
       <DependentUpon>PersonInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForms\MainRelatedForms\UpdateApplicationType.resx">
+    <EmbeddedResource Include="MainForms\MainRelatedForms\Application\UpdateApplicationType.resx">
       <DependentUpon>UpdateApplicationType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForms\MainRelatedForms\UpdateTestTypes.resx">
+    <EmbeddedResource Include="MainForms\MainRelatedForms\Application\UpdateTestTypes.resx">
       <DependentUpon>UpdateTestTypes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForms\MainRelatedForms\UserDetails.resx">
+    <EmbeddedResource Include="MainForms\MainRelatedForms\Users\UserDetails.resx">
       <DependentUpon>UserDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForms\MainRelatedForms\UserInformation.resx">
+    <EmbeddedResource Include="MainForms\MainRelatedForms\Users\UserInformation.resx">
       <DependentUpon>UserInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForms\MainRelatedForms\UsersForm.resx">
+    <EmbeddedResource Include="MainForms\MainRelatedForms\Users\UsersForm.resx">
       <DependentUpon>UsersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -413,6 +467,66 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FileManager512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id_reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id_Replace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detaines_License24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test_retake24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MainForms\MainRelatedForms\Drivers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\field_number24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\date24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id_Class.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LocalApplicationM72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LocalApplicationM128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test_clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id_search24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye_open24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Web.WebView2.1.0.3537.50\build\Microsoft.Web.WebView2.targets" Condition="Exists('packages\Microsoft.Web.WebView2.1.0.3537.50\build\Microsoft.Web.WebView2.targets')" />

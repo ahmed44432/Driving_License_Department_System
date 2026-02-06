@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net.Sockets;
 using System.Windows.Forms;
 using BusinessLayer;
 using DVLD.MainForms.MainRelatedForms;
+using DVLD.MainForms.MainRelatedForms.Application;
 using DVLD.MainRelatedForms;
 
 namespace DVLD
@@ -19,7 +14,11 @@ namespace DVLD
         {
             InitializeComponent();
             _user = user;
+            dataSend?.Invoke(_user);
         }
+
+        public delegate void UserData(clsUserBusinessLayer user);
+        public event UserData dataSend;
 
         public bool LogoutRequested = false;
         clsUserBusinessLayer _user;
@@ -96,6 +95,20 @@ namespace DVLD
             ManageTestTypes manageTestTypes = new ManageTestTypes();
             manageTestTypes.StartPosition = FormStartPosition.CenterScreen;
             manageTestTypes.ShowDialog();
+        }
+
+        private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewLocalDrivingLicenseApplication newLocalDrivingLicenseApplication = new NewLocalDrivingLicenseApplication(_user);
+            newLocalDrivingLicenseApplication.StartPosition = FormStartPosition.CenterScreen;
+            newLocalDrivingLicenseApplication.ShowDialog();
+        }
+
+        private void localDrivingLicenseApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageLocalLicenseApplications licenseApplications = new ManageLocalLicenseApplications(_user);
+            licenseApplications.StartPosition = FormStartPosition.CenterScreen;
+            licenseApplications.ShowDialog();
         }
     }
     
