@@ -263,6 +263,16 @@ namespace DVLD.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap eye72 {
+            get {
+                object obj = ResourceManager.GetObject("eye72", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap field_number24 {
             get {
                 object obj = ResourceManager.GetObject("field_number24", resourceCulture);
@@ -696,6 +706,16 @@ namespace DVLD.Properties {
         internal static System.Drawing.Bitmap test_retake24 {
             get {
                 object obj = ResourceManager.GetObject("test_retake24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap test_write24 {
+            get {
+                object obj = ResourceManager.GetObject("test_write24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

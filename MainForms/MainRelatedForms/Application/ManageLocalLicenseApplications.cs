@@ -201,6 +201,10 @@ namespace DVLD.MainForms.MainRelatedForms.Application
                     showLicenseToolStripMenuItem.Enabled = false;
                     sechduleStreetTestsToolStripMenuItem.Enabled = false;
                     sechduleWrittenTestToolStripMenuItem.Enabled = false;
+                    CancelToolStripMenuItem.Enabled = true;
+                    DeleteToolStripMenuItem.Enabled = true;
+                    EditApplicationToolStripMenuItem.Enabled = true;
+                    SechduleTestsToolStripMenuItem.Enabled = true;
                     break;
 
                 case "Cancelled":
@@ -208,8 +212,34 @@ namespace DVLD.MainForms.MainRelatedForms.Application
                     break;
 
 
+                case "Completed":
+
+                    showLicenseToolStripMenuItem.Enabled = true;
+                    IssueDrivingToolStripMenuItem.Enabled = false;
+                    CancelToolStripMenuItem.Enabled = false;
+                    DeleteToolStripMenuItem.Enabled = false;
+                    EditApplicationToolStripMenuItem.Enabled = false;
+                    SechduleTestsToolStripMenuItem.Enabled = false;
+                    showPersonLicenseHistoryToolStripMenuItem.Enabled = true;
+
+                    break;
+
             }
             
+        }
+
+        private void sechduleVisionTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LDLApplicationID =
+                Convert.ToInt32(dgvManageLicenseApplications.SelectedRows[0].
+                Cells["L.D.L.ApplicationID"].Value);
+            //clsApplicationBusinessLayer app = clsApplicationBusinessLayer.
+            //        GetApplicationByLDLAppID(LDLApplicationID);
+            VisionTestAppointment appointment = new VisionTestAppointment();
+            appointment.setLdlAppInfo(LDLApplicationID);
+            appointment.StartPosition = FormStartPosition.CenterScreen;
+            appointment.ShowDialog();
+            _RefreshLicenseApplications(); 
         }
     }
 }

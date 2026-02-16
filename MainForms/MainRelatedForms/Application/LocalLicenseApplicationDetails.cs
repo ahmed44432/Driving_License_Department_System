@@ -15,7 +15,7 @@ namespace DVLD.MainForms.MainRelatedForms.Application
 
         clsApplicationBusinessLayer _app;
         clsLDLBasicInfoBusinessLayer _ldlinfo;
-        int _ldlappid;
+       
 
         public void setAppInfo(int ldlappid)
         {
@@ -25,7 +25,6 @@ namespace DVLD.MainForms.MainRelatedForms.Application
                 GetLDLBasicInfoByLDLAppID(ldlappid);
 
             applicationBasicInfo1.setApplicationInfo(_app);
-            _ldlappid = ldlappid;
             _RefreshApplicationInfo(_ldlinfo);
         }
 

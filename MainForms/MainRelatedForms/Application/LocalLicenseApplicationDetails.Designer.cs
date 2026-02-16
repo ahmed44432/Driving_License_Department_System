@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lkbShowLicenseInfo = new System.Windows.Forms.LinkLabel();
             this.lbPassedTest = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.applicationBasicInfo1 = new DVLD.MainForms.MainRelatedForms.Application.ApplicationBasicInfo();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -47,6 +50,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.pictureBox4);
+            this.groupBox1.Controls.Add(this.lkbShowLicenseInfo);
             this.groupBox1.Controls.Add(this.lbPassedTest);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label4);
@@ -62,6 +67,29 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Local Driving License Application Info";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox4.Image = global::DVLD.Properties.Resources.id_Class;
+            this.pictureBox4.Location = new System.Drawing.Point(458, 112);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 48;
+            this.pictureBox4.TabStop = false;
+            // 
+            // lkbShowLicenseInfo
+            // 
+            this.lkbShowLicenseInfo.AutoSize = true;
+            this.lkbShowLicenseInfo.Enabled = false;
+            this.lkbShowLicenseInfo.Location = new System.Drawing.Point(499, 117);
+            this.lkbShowLicenseInfo.Name = "lkbShowLicenseInfo";
+            this.lkbShowLicenseInfo.Size = new System.Drawing.Size(95, 13);
+            this.lkbShowLicenseInfo.TabIndex = 47;
+            this.lkbShowLicenseInfo.TabStop = true;
+            this.lkbShowLicenseInfo.Text = "Show License Info";
             // 
             // lbPassedTest
             // 
@@ -99,7 +127,7 @@
             // 
             this.lbAppliedForLicense.AutoSize = true;
             this.lbAppliedForLicense.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAppliedForLicense.Location = new System.Drawing.Point(228, 89);
+            this.lbAppliedForLicense.Location = new System.Drawing.Point(228, 75);
             this.lbAppliedForLicense.Name = "lbAppliedForLicense";
             this.lbAppliedForLicense.Size = new System.Drawing.Size(41, 16);
             this.lbAppliedForLicense.TabIndex = 38;
@@ -120,7 +148,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox3.Image = global::DVLD.Properties.Resources.Detaines_License24;
-            this.pictureBox3.Location = new System.Drawing.Point(176, 89);
+            this.pictureBox3.Location = new System.Drawing.Point(176, 75);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(24, 24);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -143,7 +171,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 93);
+            this.label2.Location = new System.Drawing.Point(6, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 16);
             this.label2.TabIndex = 23;
@@ -176,6 +204,7 @@
             this.Size = new System.Drawing.Size(708, 374);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -196,5 +225,7 @@
         private System.Windows.Forms.Label lbPassedTest;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.LinkLabel lkbShowLicenseInfo;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

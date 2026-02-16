@@ -139,6 +139,7 @@
             this.sechduleVisionTestToolStripMenuItem.Name = "sechduleVisionTestToolStripMenuItem";
             this.sechduleVisionTestToolStripMenuItem.Size = new System.Drawing.Size(216, 30);
             this.sechduleVisionTestToolStripMenuItem.Text = "Sechdule Vision Test";
+            this.sechduleVisionTestToolStripMenuItem.Click += new System.EventHandler(this.sechduleVisionTestToolStripMenuItem_Click);
             // 
             // sechduleWrittenTestToolStripMenuItem
             // 
