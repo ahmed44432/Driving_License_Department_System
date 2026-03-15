@@ -148,6 +148,7 @@
             this.sechduleWrittenTestToolStripMenuItem.Name = "sechduleWrittenTestToolStripMenuItem";
             this.sechduleWrittenTestToolStripMenuItem.Size = new System.Drawing.Size(216, 30);
             this.sechduleWrittenTestToolStripMenuItem.Text = "Sechdule Written Test";
+            this.sechduleWrittenTestToolStripMenuItem.Click += new System.EventHandler(this.sechduleWrittenTestToolStripMenuItem_Click);
             // 
             // sechduleStreetTestsToolStripMenuItem
             // 
@@ -156,10 +157,11 @@
             this.sechduleStreetTestsToolStripMenuItem.Name = "sechduleStreetTestsToolStripMenuItem";
             this.sechduleStreetTestsToolStripMenuItem.Size = new System.Drawing.Size(216, 30);
             this.sechduleStreetTestsToolStripMenuItem.Text = "Sechdule Street Tests";
+            this.sechduleStreetTestsToolStripMenuItem.Click += new System.EventHandler(this.sechduleStreetTestsToolStripMenuItem_Click);
             // 
             // IssueDrivingToolStripMenuItem
             // 
-            this.IssueDrivingToolStripMenuItem.Image = global::DVLD.Properties.Resources.call24;
+            this.IssueDrivingToolStripMenuItem.Image = global::DVLD.Properties.Resources.id_add24;
             this.IssueDrivingToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.IssueDrivingToolStripMenuItem.Name = "IssueDrivingToolStripMenuItem";
             this.IssueDrivingToolStripMenuItem.Size = new System.Drawing.Size(280, 30);

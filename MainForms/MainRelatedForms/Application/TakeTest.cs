@@ -2,6 +2,7 @@
 using System;
 using System.Windows.Forms;
 using BusinessLayer;
+using DVLD.Properties;
 
 namespace DVLD.MainForms.MainRelatedForms.Application
 {
@@ -16,20 +17,41 @@ namespace DVLD.MainForms.MainRelatedForms.Application
         clsTestAppointmentsBusinessLayer _TestApp;
         clsLDLBasicInfoBusinessLayer _ldlinfo;
         byte _trial = 0;
+        enum enTestType {VisionTest = 1,WrittenTest = 2, PraticalTest = 3 }
+        private enTestType _test_type;
 
-        public void setTestInfo(int ldlappid)
+        public void UI_ByType()
         {
+            if (_test_type == enTestType.VisionTest)
+            {
+                picboxMain.Image = Resources.eye72;
+            }
+            else if (_test_type == enTestType.WrittenTest)
+            {
+                picboxMain.Image = Resources.Written_test72;
+            }
+            else if (_test_type == enTestType.PraticalTest)
+            {
+                picboxMain.Image = Resources.car_test72;
+            }
+        }
+
+        public void setTestInfo(int testappid, byte typeid)
+        {
+            _test_type = (enTestType)typeid;
+            UI_ByType();
+
             _ldlinfo = clsLDLBasicInfoBusinessLayer.
-                    GetLDLBasicInfoByLDLAppID(ldlappid);
+                    GetLDLBasicInfoByTestAppID(testappid);
             _TestApp = new clsTestAppointmentsBusinessLayer();
             _trial = Convert.ToByte(clsTestAppointmentsBusinessLayer.
-                GetVisionTestCountByLDLAppID(ldlappid));
+                GetTestCountByLDLAppID(_ldlinfo.LDLApplicationID, typeid));
 
             if (clsTestAppointmentsBusinessLayer.
-                isVisionTestAppointmentsNotLockedExisted(ldlappid))
+                isTestAppointmentsNotLockedExisted(testappid,typeid))
             {
                 _TestApp = clsTestAppointmentsBusinessLayer.
-                    GetVisionTestAppointmentByLDLappID(ldlappid);
+                    GetTestAppointmentByTestAppID(testappid);
             }
 
             _RefreshApplicationInfo(_ldlinfo);
@@ -40,7 +62,7 @@ namespace DVLD.MainForms.MainRelatedForms.Application
             if (_TestApp != null && _TestApp.TestAppointmentID != -1)
             {
                 _trial = Convert.ToByte(clsTestAppointmentsBusinessLayer.
-               GetVisionTestCountByLDLAppID(ldlinfo.LDLApplicationID));
+                GetTestCountByLDLAppID(_ldlinfo.LDLApplicationID,(byte) _test_type));
 
                 lbDLAppID.Text = ldlinfo.LDLApplicationID.ToString();
                 lbDClass.Text = ldlinfo.ClassName;
@@ -76,6 +98,15 @@ namespace DVLD.MainForms.MainRelatedForms.Application
             MessageBoxButtons.YesNo, MessageBoxIcon.Warning) ==
             DialogResult.Yes)
             {
+
+                if (clsTestsBusinessLayer.IsTestPassed(_TestApp.TestAppointmentID,(byte)_TestApp.TestTypeID))
+                {
+                    MessageBox.Show("alredy passed the test !!");
+                    //CloseRequested?.Invoke(this, EventArgs.Empty);
+                    return;
+                }
+
+
                 _Test = new clsTestsBusinessLayer();
                 _Test.Notes = txbNotes.Text;
                 _Test.TestAppointmentID = _TestApp.TestAppointmentID;

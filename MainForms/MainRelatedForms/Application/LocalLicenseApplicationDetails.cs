@@ -34,7 +34,7 @@ namespace DVLD.MainForms.MainRelatedForms.Application
             {
                 lbAppliedForLicense.Text = ldlinfo.ClassName;
                 lbDLAppID.Text = ldlinfo.LDLApplicationID.ToString();
-                lbPassedTest.Text = ldlinfo.PassedTestCount.ToString();
+                lbPassedTest.Text = "3/"+ldlinfo.PassedTestCount.ToString();
                 return;
             }
             else

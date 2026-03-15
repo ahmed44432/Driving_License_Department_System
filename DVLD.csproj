@@ -64,6 +64,12 @@
     <Compile Include="MainForms\MainRelatedForms\Application\ApplicationBasicInfo.Designer.cs">
       <DependentUpon>ApplicationBasicInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForms\MainRelatedForms\Application\IssueDriverLicenseFirstTimeForm .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainRelatedForms\Application\IssueDriverLicenseFirstTimeForm .Designer.cs">
+      <DependentUpon>IssueDriverLicenseFirstTimeForm .cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForms\MainRelatedForms\Application\LDLApplicationInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,11 +118,11 @@
     <Compile Include="MainForms\MainRelatedForms\Application\TakeTest.Designer.cs">
       <DependentUpon>TakeTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\Application\VisionTestAppointment.cs">
+    <Compile Include="MainForms\MainRelatedForms\Application\TestsAppointmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForms\MainRelatedForms\Application\VisionTestAppointment.Designer.cs">
-      <DependentUpon>VisionTestAppointment.cs</DependentUpon>
+    <Compile Include="MainForms\MainRelatedForms\Application\TestsAppointmentForm.Designer.cs">
+      <DependentUpon>TestsAppointmentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForms\MainRelatedForms\People\AddingPerson.cs">
       <SubType>UserControl</SubType>
@@ -243,6 +249,9 @@
     <EmbeddedResource Include="MainForms\MainRelatedForms\Application\ApplicationBasicInfo.resx">
       <DependentUpon>ApplicationBasicInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\MainRelatedForms\Application\IssueDriverLicenseFirstTimeForm .resx">
+      <DependentUpon>IssueDriverLicenseFirstTimeForm .cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForms\MainRelatedForms\Application\LDLApplicationInformation.resx">
       <DependentUpon>LDLApplicationInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -267,8 +276,8 @@
     <EmbeddedResource Include="MainForms\MainRelatedForms\Application\TakeTest.resx">
       <DependentUpon>TakeTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForms\MainRelatedForms\Application\VisionTestAppointment.resx">
-      <DependentUpon>VisionTestAppointment.cs</DependentUpon>
+    <EmbeddedResource Include="MainForms\MainRelatedForms\Application\TestsAppointmentForm.resx">
+      <DependentUpon>TestsAppointmentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\MainRelatedForms\People\AddingPerson.resx">
       <DependentUpon>AddingPerson.cs</DependentUpon>
@@ -578,6 +587,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\test_write24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Written_test72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car_test72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id_add24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id_info32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Web.WebView2.1.0.3537.50\build\Microsoft.Web.WebView2.targets" Condition="Exists('packages\Microsoft.Web.WebView2.1.0.3537.50\build\Microsoft.Web.WebView2.targets')" />

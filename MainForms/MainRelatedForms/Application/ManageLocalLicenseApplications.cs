@@ -22,6 +22,10 @@ namespace DVLD.MainForms.MainRelatedForms.Application
         }
 
         clsUserBusinessLayer _user;
+        //clsLDLBasicInfoBusinessLayer _LDLBasicInfo;
+
+        enum TestType { VisionTest = 1,WrittingTest = 2, StreetTest = 3};
+        TestType _test_type;
 
         public void user_data(clsUserBusinessLayer user)
         {
@@ -156,21 +160,43 @@ namespace DVLD.MainForms.MainRelatedForms.Application
             int LDLApplicationID =
                  Convert.ToInt32(dgvManageLicenseApplications.SelectedRows[0].
                  Cells["L.D.L.ApplicationID"].Value);
-            clsApplicationBusinessLayer.
-                DeleteApplicationByLDLAppID(LDLApplicationID);
-            _RefreshLicenseApplications();
+            
+            if(MessageBox.Show(@"Are you sure you want to delete this Application",
+                "Deleting",MessageBoxButtons.YesNo,MessageBoxIcon.Warning) ==
+                DialogResult.Yes)
+            {
+                if(!clsApplicationBusinessLayer.
+                DeleteApplicationByLDLAppID(LDLApplicationID,(byte)_test_type))
+                {
+                    MessageBox.Show(@"Can't Delete this Application",
+                        "info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                _RefreshLicenseApplications();
+            }
+
+            
         }
 
         private void CancelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int LDLApplicationID =
+            if (MessageBox.Show(@"Are you sure you want to Cancel this Application",
+               "Canceling", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) ==
+               DialogResult.Yes)
+            {
+                int LDLApplicationID =
                 Convert.ToInt32(dgvManageLicenseApplications.SelectedRows[0].
                 Cells["L.D.L.ApplicationID"].Value);
-            clsApplicationBusinessLayer app = clsApplicationBusinessLayer.
-                    GetApplicationByLDLAppID(LDLApplicationID);
-            app.ApplicationStatus = 2;
-            app.Save();
-            _RefreshLicenseApplications();
+                string classname =
+                    Convert.ToString(dgvManageLicenseApplications.SelectedRows[0].
+                    Cells["ClassName"].Value);
+                int classid = clsLicenseClassesbusinessLayer.
+                    GetLicenseClassIDByName(classname);
+                clsApplicationBusinessLayer app = clsApplicationBusinessLayer.
+                        GetApplicationByLDLAppID(LDLApplicationID);
+                app.ApplicationStatus = 2;
+                app.Save(classid);
+                _RefreshLicenseApplications();
+            }
 
         }
 
@@ -183,6 +209,7 @@ namespace DVLD.MainForms.MainRelatedForms.Application
                 LDLApplicationInformation(LDLApplicationID);
             lDLApplication.StartPosition = FormStartPosition.CenterScreen;
             lDLApplication.ShowDialog();
+
             _RefreshLicenseApplications();
 
         }
@@ -197,14 +224,46 @@ namespace DVLD.MainForms.MainRelatedForms.Application
             switch (LdlAppInfo.Status)
             {
                 case "New":
+
+                    SechduleTestsToolStripMenuItem.Enabled = true;
                     IssueDrivingToolStripMenuItem.Enabled = false;
                     showLicenseToolStripMenuItem.Enabled = false;
-                    sechduleStreetTestsToolStripMenuItem.Enabled = false;
-                    sechduleWrittenTestToolStripMenuItem.Enabled = false;
+
+                    if (LdlAppInfo.PassedTestCount < 1)
+                    {
+                        sechduleVisionTestToolStripMenuItem.Enabled = true;
+                        sechduleWrittenTestToolStripMenuItem.Enabled = false;
+                        sechduleStreetTestsToolStripMenuItem.Enabled = false;
+                        _test_type = TestType.VisionTest;
+                    }
+                    else if (LdlAppInfo.PassedTestCount == 1 )
+                    {
+                        sechduleVisionTestToolStripMenuItem.Enabled = false;
+                        sechduleWrittenTestToolStripMenuItem.Enabled = true;
+                        sechduleStreetTestsToolStripMenuItem.Enabled = false;
+                        _test_type = TestType.WrittingTest;
+                    }
+                    else if (LdlAppInfo.PassedTestCount == 2)
+                    {
+                        sechduleVisionTestToolStripMenuItem.Enabled = false;
+                        sechduleWrittenTestToolStripMenuItem.Enabled = false;
+                        sechduleStreetTestsToolStripMenuItem.Enabled = true;
+                        _test_type = TestType.StreetTest;
+                    }
+                    else if (LdlAppInfo.PassedTestCount > 2)
+                    {
+                        SechduleTestsToolStripMenuItem.Enabled = false;
+                        sechduleVisionTestToolStripMenuItem.Enabled = false;
+                        sechduleWrittenTestToolStripMenuItem.Enabled = false;
+                        sechduleStreetTestsToolStripMenuItem.Enabled = false;
+                        IssueDrivingToolStripMenuItem.Enabled = true;
+                    }
+
+                   
                     CancelToolStripMenuItem.Enabled = true;
                     DeleteToolStripMenuItem.Enabled = true;
                     EditApplicationToolStripMenuItem.Enabled = true;
-                    SechduleTestsToolStripMenuItem.Enabled = true;
+                   
                     break;
 
                 case "Cancelled":
@@ -225,7 +284,7 @@ namespace DVLD.MainForms.MainRelatedForms.Application
                     break;
 
             }
-            
+
         }
 
         private void sechduleVisionTestToolStripMenuItem_Click(object sender, EventArgs e)
@@ -233,13 +292,56 @@ namespace DVLD.MainForms.MainRelatedForms.Application
             int LDLApplicationID =
                 Convert.ToInt32(dgvManageLicenseApplications.SelectedRows[0].
                 Cells["L.D.L.ApplicationID"].Value);
-            //clsApplicationBusinessLayer app = clsApplicationBusinessLayer.
-            //        GetApplicationByLDLAppID(LDLApplicationID);
-            VisionTestAppointment appointment = new VisionTestAppointment();
+
+            _test_type = TestType.VisionTest;
+
+            TestsAppointmentForm appointment =
+                new TestsAppointmentForm(_user,(byte) _test_type);
             appointment.setLdlAppInfo(LDLApplicationID);
             appointment.StartPosition = FormStartPosition.CenterScreen;
             appointment.ShowDialog();
             _RefreshLicenseApplications(); 
         }
+
+        private void sechduleWrittenTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LDLApplicationID =
+                Convert.ToInt32(dgvManageLicenseApplications.SelectedRows[0].
+                Cells["L.D.L.ApplicationID"].Value);
+
+            _test_type = TestType.WrittingTest;
+
+            TestsAppointmentForm appointment =
+                new TestsAppointmentForm(_user, (byte)_test_type);
+            appointment.setLdlAppInfo(LDLApplicationID);
+            appointment.StartPosition = FormStartPosition.CenterScreen;
+            appointment.ShowDialog();
+            _RefreshLicenseApplications();
+        }
+
+        private void sechduleStreetTestsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LDLApplicationID =
+                Convert.ToInt32(dgvManageLicenseApplications.SelectedRows[0].
+                Cells["L.D.L.ApplicationID"].Value);
+
+            _test_type = TestType.StreetTest;
+
+            TestsAppointmentForm appointment =
+                new TestsAppointmentForm(_user, (byte)_test_type);
+            appointment.setLdlAppInfo(LDLApplicationID);
+            appointment.StartPosition = FormStartPosition.CenterScreen;
+            appointment.ShowDialog();
+
+            
+
+            _RefreshLicenseApplications();
+        }
+
+
+
+
+
+
     }
 }

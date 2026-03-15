@@ -187,6 +187,9 @@
   <data name="close1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="User24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="arrow_right32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow_right32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -195,6 +198,9 @@
   </data>
   <data name="LocalApplicationM72" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LocalApplicationM72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="id_add24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\id_add24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="test_management" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\test-management.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,11 +211,14 @@
   <data name="sign_out24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sign_out24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="papers24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\papers24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Written_test72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Written_test72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,8 +229,8 @@
   <data name="test_config24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\test_config24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="password" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="test_retake24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\test_retake24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="driver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\driver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,8 +238,8 @@
   <data name="account_settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\account_settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="User24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\User24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="car_test72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\car_test72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PLUS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PLUS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -261,9 +270,6 @@
   </data>
   <data name="LocalApplicationM128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LocalApplicationM128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="test_retake24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\test_retake24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Hole_io" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hole io.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -307,8 +313,14 @@
   <data name="date24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\date24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="test_write24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\test_write24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Detaines_License24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Detaines_License24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="password" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="info24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\info24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -328,7 +340,7 @@
   <data name="history24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\history24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="test_write24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\test_write24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="id_info32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\id_info32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -48,7 +48,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbTitel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picboxMain = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.rdbPass = new System.Windows.Forms.RadioButton();
@@ -64,7 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
@@ -90,7 +90,7 @@
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lbTitel);
-            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.picboxMain);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(427, 426);
@@ -301,15 +301,15 @@
             this.lbTitel.TabIndex = 57;
             this.lbTitel.Text = "Schedule Test";
             // 
-            // pictureBox1
+            // picboxMain
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::DVLD.Properties.Resources.eye72;
-            this.pictureBox1.Location = new System.Drawing.Point(182, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 68);
-            this.pictureBox1.TabIndex = 56;
-            this.pictureBox1.TabStop = false;
+            this.picboxMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picboxMain.Image = global::DVLD.Properties.Resources.eye72;
+            this.picboxMain.Location = new System.Drawing.Point(182, 10);
+            this.picboxMain.Name = "picboxMain";
+            this.picboxMain.Size = new System.Drawing.Size(70, 68);
+            this.picboxMain.TabIndex = 56;
+            this.picboxMain.TabStop = false;
             // 
             // label3
             // 
@@ -424,7 +424,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
@@ -453,7 +453,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbTitel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picboxMain;
         private System.Windows.Forms.Label lbDate;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox8;

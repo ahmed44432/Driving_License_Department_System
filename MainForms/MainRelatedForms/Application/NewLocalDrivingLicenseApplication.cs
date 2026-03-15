@@ -86,10 +86,10 @@ namespace DVLD.MainForms.MainRelatedForms.Application
 
             int classID = Convert.ToInt32(row["LicenseClassID"]);
 
-            lbApllicationFees.Text =
-                clsLicenseClassesbusinessLayer
-                .GetLicenseClassesFeesByID(classID)
-                .ToString();
+            lbApllicationFees.Text = "15";
+                //clsLicenseClassesbusinessLayer
+                //.GetLicenseClassesFeesByID(classID)
+                //.ToString();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -104,23 +104,27 @@ namespace DVLD.MainForms.MainRelatedForms.Application
             {
                 if (_application == null)
                 { _application = new clsApplicationBusinessLayer(); }
-
+                
 
                 _application.ApplicationPersonID = _person.ID;
                 _application.ApplicationDate = Convert.ToDateTime(lbApplicationDate.Text);
                 _application.PaidFees = Convert.ToInt16(lbApllicationFees.Text);
                 _application.CreatedByUserID = _user.UserID;
-                _application.ApplicationTypeID = cbxLicenseClass.SelectedIndex + 1;
+                int classapp = cbxLicenseClass.SelectedIndex + 1;
+                _application.ApplicationTypeID = 1;
                 _application.ApplicationStatus = 1;
                 _application.LastStatusDate = Convert.ToDateTime(lbApplicationDate.Text);
+                var row = cbxLicenseClass.SelectedItem as DataRowView;
+                string className = row["ClassName"].ToString();
 
 
-                if (!clsApplicationBusinessLayer.
-                    isApplicationExisted(_application.ApplicationPersonID,
-                    _application.ApplicationTypeID))
+
+                if (!clsLocalLicenseApplicationBusinnessLayer
+                    .isLDLApplicationExisted(_person.NationalNumber,
+                      className))
                 {
 
-                    if (_application.Save())
+                    if (_application.Save(classapp))
                     {
 
                         MessageBox.Show("Application Saved successfully");
@@ -137,7 +141,8 @@ namespace DVLD.MainForms.MainRelatedForms.Application
                 }
                 else
                 {
-                    MessageBox.Show("Application Saved Failed (Existed)"
+                    MessageBox.Show(@"Application Saved Failed (Existed)
+                      the person alredy has app in this class"
                         , "", MessageBoxButtons.OK
                         , MessageBoxIcon.Error);
 

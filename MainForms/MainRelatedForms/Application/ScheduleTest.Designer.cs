@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbInfo = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.retakeTestInfo1 = new DVLD.MainForms.MainRelatedForms.Application.RetakeTestInfo();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.lbFees = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lbTrial = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lbDClass = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lbDLAppID = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbTitel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbInfo = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picboxMain = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -59,7 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxMain)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -86,7 +86,7 @@
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lbTitel);
-            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.picboxMain);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
@@ -94,6 +94,18 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Vision Test";
+            // 
+            // lbInfo
+            // 
+            this.lbInfo.AutoSize = true;
+            this.lbInfo.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInfo.ForeColor = System.Drawing.Color.Black;
+            this.lbInfo.Location = new System.Drawing.Point(36, 145);
+            this.lbInfo.Name = "lbInfo";
+            this.lbInfo.Size = new System.Drawing.Size(367, 19);
+            this.lbInfo.TabIndex = 58;
+            this.lbInfo.Text = "Person alredy sat for the test, Appointment Locked";
+            this.lbInfo.Visible = false;
             // 
             // btnSave
             // 
@@ -132,18 +144,6 @@
             this.lbFees.TabIndex = 54;
             this.lbFees.Text = "[???]";
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox5.Image = global::DVLD.Properties.Resources.money24;
-            this.pictureBox5.Location = new System.Drawing.Point(129, 420);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox5.TabIndex = 53;
-            this.pictureBox5.TabStop = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -153,18 +153,6 @@
             this.label6.Size = new System.Drawing.Size(50, 16);
             this.label6.TabIndex = 52;
             this.label6.Text = "Fees :";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox6.Image = global::DVLD.Properties.Resources.date24;
-            this.pictureBox6.Location = new System.Drawing.Point(129, 376);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox6.TabIndex = 50;
-            this.pictureBox6.TabStop = false;
             // 
             // label5
             // 
@@ -186,18 +174,6 @@
             this.lbTrial.TabIndex = 48;
             this.lbTrial.Text = "[???]";
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox4.Image = global::DVLD.Properties.Resources.field_number24;
-            this.pictureBox4.Location = new System.Drawing.Point(129, 332);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 47;
-            this.pictureBox4.TabStop = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -217,18 +193,6 @@
             this.lbName.Size = new System.Drawing.Size(41, 16);
             this.lbName.TabIndex = 45;
             this.lbName.Text = "[???]";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox7.Image = global::DVLD.Properties.Resources.field_number24;
-            this.pictureBox7.Location = new System.Drawing.Point(129, 288);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox7.TabIndex = 44;
-            this.pictureBox7.TabStop = false;
             // 
             // label7
             // 
@@ -250,18 +214,6 @@
             this.lbDClass.TabIndex = 42;
             this.lbDClass.Text = "[???]";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox3.Image = global::DVLD.Properties.Resources.Detaines_License24;
-            this.pictureBox3.Location = new System.Drawing.Point(129, 244);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 41;
-            this.pictureBox3.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -281,18 +233,6 @@
             this.lbDLAppID.Size = new System.Drawing.Size(41, 16);
             this.lbDLAppID.TabIndex = 39;
             this.lbDLAppID.Text = "[???]";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Image = global::DVLD.Properties.Resources.field_number24;
-            this.pictureBox2.Location = new System.Drawing.Point(129, 200);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 38;
-            this.pictureBox2.TabStop = false;
             // 
             // label1
             // 
@@ -315,27 +255,87 @@
             this.lbTitel.TabIndex = 5;
             this.lbTitel.Text = "Schedule Test";
             // 
-            // pictureBox1
+            // pictureBox5
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::DVLD.Properties.Resources.eye72;
-            this.pictureBox1.Location = new System.Drawing.Point(175, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 68);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox5.Image = global::DVLD.Properties.Resources.money24;
+            this.pictureBox5.Location = new System.Drawing.Point(129, 420);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox5.TabIndex = 53;
+            this.pictureBox5.TabStop = false;
             // 
-            // lbInfo
+            // pictureBox6
             // 
-            this.lbInfo.AutoSize = true;
-            this.lbInfo.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbInfo.ForeColor = System.Drawing.Color.Black;
-            this.lbInfo.Location = new System.Drawing.Point(36, 145);
-            this.lbInfo.Name = "lbInfo";
-            this.lbInfo.Size = new System.Drawing.Size(367, 19);
-            this.lbInfo.TabIndex = 58;
-            this.lbInfo.Text = "Person alredy sat for the test, Appointment Locked";
-            this.lbInfo.Visible = false;
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox6.Image = global::DVLD.Properties.Resources.date24;
+            this.pictureBox6.Location = new System.Drawing.Point(129, 376);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox6.TabIndex = 50;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox4.Image = global::DVLD.Properties.Resources.field_number24;
+            this.pictureBox4.Location = new System.Drawing.Point(129, 332);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 47;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox7.Image = global::DVLD.Properties.Resources.field_number24;
+            this.pictureBox7.Location = new System.Drawing.Point(129, 288);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox7.TabIndex = 44;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox3.Image = global::DVLD.Properties.Resources.Detaines_License24;
+            this.pictureBox3.Location = new System.Drawing.Point(129, 244);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 41;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox2.Image = global::DVLD.Properties.Resources.field_number24;
+            this.pictureBox2.Location = new System.Drawing.Point(129, 200);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 38;
+            this.pictureBox2.TabStop = false;
+            // 
+            // picboxMain
+            // 
+            this.picboxMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picboxMain.Image = global::DVLD.Properties.Resources.eye72;
+            this.picboxMain.Location = new System.Drawing.Point(175, 19);
+            this.picboxMain.Name = "picboxMain";
+            this.picboxMain.Size = new System.Drawing.Size(70, 68);
+            this.picboxMain.TabIndex = 4;
+            this.picboxMain.TabStop = false;
             // 
             // ScheduleTest
             // 
@@ -352,7 +352,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxMain)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -360,7 +360,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picboxMain;
         private System.Windows.Forms.Label lbTitel;
         private System.Windows.Forms.Label lbDLAppID;
         private System.Windows.Forms.PictureBox pictureBox2;

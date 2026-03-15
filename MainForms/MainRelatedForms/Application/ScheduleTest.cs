@@ -1,7 +1,9 @@
-﻿
-using System;
+﻿using System;
 using System.Windows.Forms;
 using BusinessLayer;
+using DVLD.Properties;
+
+
 
 namespace DVLD.MainForms.MainRelatedForms.Application
 {
@@ -10,137 +12,422 @@ namespace DVLD.MainForms.MainRelatedForms.Application
         public ScheduleTest()
         {
             InitializeComponent();
+            _mode = enMode.Add;
+            _creation_mode = enCreationMode.New;
+            _test_type = enTestType.VisionTest;
+            
         }
 
-        public delegate void TestInfo(clsTestAppointmentsBusinessLayer testapp);
-        public event TestInfo OnTestInfoBack;
         public event EventHandler CloseRequested;
 
-        clsTestAppointmentsBusinessLayer _TestApp;
-        //clsApplicationBusinessLayer _app;
-        clsLDLBasicInfoBusinessLayer _ldlinfo;
-        byte _trial = 0;
+        private clsTestAppointmentsBusinessLayer _testApp;
+        private clsLDLBasicInfoBusinessLayer _ldlInfo;
+        private clsApplicationBusinessLayer _retakeApp;
+        private clsTestAppointmentsBusinessLayer _retakeTestApp;
+        private clsApplicationBusinessLayer _oldApp;
+        private clsUserBusinessLayer _currentUser;
 
-        public void setTestInfo(int ldlappid)
+        private byte _trial;
+
+        enum enMode
         {
-            _ldlinfo = clsLDLBasicInfoBusinessLayer.
-                    GetLDLBasicInfoByLDLAppID(ldlappid);
-            _TestApp = new clsTestAppointmentsBusinessLayer();
-            _trial = Convert.ToByte(clsTestAppointmentsBusinessLayer.
-                GetVisionTestCountByLDLAppID(ldlappid));
-
-            if (clsTestAppointmentsBusinessLayer.
-                isVisionTestAppointmentsNotLockedExisted(ldlappid)) {
-                _TestApp = clsTestAppointmentsBusinessLayer.
-                    GetVisionTestAppointmentByLDLappID(ldlappid);
-            }else if (clsTestAppointmentsBusinessLayer.
-                isVisionTestAppointmentsLockedExisted(ldlappid))
-            {
-                lbInfo.Visible = true;
-                dtpDate.Enabled = false;
-                btnSave.Enabled = false;
-            }
-            
-                _RefreshApplicationInfo(_ldlinfo);
+            Add,
+            Update
         }
 
-        private void _RefreshApplicationInfo(clsLDLBasicInfoBusinessLayer ldlinfo)
+        enum enCreationMode
         {
-            if(_TestApp != null && _TestApp.TestAppointmentID != -1)
+            New,
+            Retake
+        }
+
+        enum enTestType
+        {
+            VisionTest = 1,
+            WrittenTest = 2,
+            PraticalTest = 3
+        }
+
+        private enMode _mode;
+        private enCreationMode _creation_mode;
+        private enTestType _test_type;
+
+        public void LoadCurrentUserInfo(clsUserBusinessLayer user)
+        { _currentUser = user; }
+
+        //---------------------------------------------------
+        // LOAD
+        //---------------------------------------------------
+
+        public void UI_ByType()
+        {
+            if (_test_type == enTestType.VisionTest)
             {
-                _trial = Convert.ToByte(clsTestAppointmentsBusinessLayer.
-               GetVisionTestCountByLDLAppID(ldlinfo.LDLApplicationID));
-
-                lbDLAppID.Text = ldlinfo.LDLApplicationID.ToString();
-                lbDClass.Text = ldlinfo.ClassName;
-                lbName.Text = ldlinfo.FullName;
-                lbTrial.Text = _trial.ToString();
-                lbFees.Text = ldlinfo.PaidFees.ToString();
-                dtpDate.Value = _TestApp.AppointmentDate;
-
-
-                return;
+                picboxMain.Image = Resources.eye72;
             }
-
-            else if (ldlinfo != null)
+            else if (_test_type == enTestType.WrittenTest)
             {
+                picboxMain.Image = Resources.Written_test72;
+                
+            }else if (_test_type == enTestType.PraticalTest)
+            {
+                picboxMain.Image = Resources.car_test72;
+            }
+        }
 
-                _trial = Convert.ToByte(clsTestAppointmentsBusinessLayer.
-               GetVisionTestCountByLDLAppID(ldlinfo.LDLApplicationID));
+        public void LoadTest(int ldlAppID,byte typeid,int appointmentid = -1)
+        {
+            _test_type = (enTestType)typeid;
+            UI_ByType(); 
+           
 
-                lbDLAppID.Text  = ldlinfo.LDLApplicationID.ToString();
-                lbDClass.Text = ldlinfo.ClassName;
-                lbName.Text = ldlinfo.FullName;
-                lbTrial.Text = _trial.ToString();
-                lbFees.Text = ldlinfo.PaidFees.ToString();
+            if (appointmentid == -1)
+            {
+                _mode = enMode.Add;
+                _creation_mode = enCreationMode.New;
 
-                ////
 
-                _TestApp.LDLApplicationID = _ldlinfo.LDLApplicationID;
-                _TestApp.TestTypeID = 1; // vision test
-                _TestApp.PaidFees = _ldlinfo.PaidFees;
-                _TestApp.AppointmentDate = dtpDate.Value;
-                clsUserBusinessLayer user =
-                    clsUserBusinessLayer.GetUserByUserName(_ldlinfo.UserName);
-                _TestApp.CreatedByUserID = user.UserID;
-                _TestApp.IsLocked = false;
+                _ldlInfo =
+               clsLDLBasicInfoBusinessLayer
+               .GetLDLBasicInfoByLDLAppID(ldlAppID);
 
-                return;
+                _testApp =
+                    clsTestAppointmentsBusinessLayer
+                    .GetTestAppointmentByLdlAppid(ldlAppID,(byte)_test_type);
+
+                _trial = Convert.ToByte(
+                    clsTestAppointmentsBusinessLayer
+                    .GetTestCountByLDLAppID(ldlAppID, (byte)_test_type));
             }
             else
             {
-                _DefLabels();
+                _mode = enMode.Update;
+           
+
+                _ldlInfo =
+               clsLDLBasicInfoBusinessLayer
+               .GetLDLBasicInfoByLDLAppID(ldlAppID);
+
+                _testApp =
+                    clsTestAppointmentsBusinessLayer
+                    .GetTestAppointmentByTestAppID(appointmentid);
+
+                _trial = Convert.ToByte(
+                     clsTestAppointmentsBusinessLayer
+                     .GetTestCountByLDLAppID(ldlAppID, (byte)_test_type));
+
+                if (_trial > 1)
+                {
+                    //if (!_testApp.IsLocked){
+                        retakeTestInfo1.Enabled = true;
+                        retakeTestInfo1.setRtktestinfo(_testApp);
+                    //}
+                }
+                    
+            }
+
+      
+
+            HandleState();
+            RefreshUI();
+        }
+
+        //---------------------------------------------------
+        // STATE LOGIC
+        //---------------------------------------------------
+        private void HandleState()
+        {
+            if (_ldlInfo == null)
+                return;
+
+            if (_testApp == null ||
+                _testApp.TestAppointmentID == -1)
+            {
+                CreateNewAppointment();
                 return;
             }
 
-        }
+            bool passed =
+                clsTestsBusinessLayer
+                .IsTestPassed(_testApp.TestAppointmentID,(byte)_testApp.TestTypeID);
 
-        private void _DefLabels()
-        {
-            lbDLAppID.Text   = "[???]";
-            lbDClass.Text    = "[???]";
-            lbName.Text      = "[???]";
-            lbTrial.Text     = "[???]";
-            lbFees.Text      = "[???]";
-        }
+            bool failed =
+                clsTestsBusinessLayer
+                .IsTestFailed(_testApp.TestAppointmentID, (byte)_testApp.TestTypeID);
 
-        private void btnSave_Click(object sender, System.EventArgs e)
-        {
-            if(_TestApp != null)
+            bool locked =
+                clsTestAppointmentsBusinessLayer
+                .isTestAppointmentsLockedExisted(
+                   _testApp.TestAppointmentID, (byte)_testApp.TestTypeID);
+
+
+            if(failed && !passed) { _creation_mode = enCreationMode.Retake; }
+
+            if (_mode == enMode.Add)
             {
-                _TestApp.AppointmentDate = dtpDate.Value;
-
-                if(_TestApp.Save()){
-                    
-                    MessageBox.Show("Saved :)");
-                    CloseRequested?.Invoke(this, EventArgs.Empty);
-                }
-                else
+                if (passed)
                 {
-                    MessageBox.Show("Cant Save !!");
+                    lbInfo.Visible = true;
+                    dtpDate.Enabled = false;
+                    btnSave.Enabled = false;
+                    return;
                 }
 
+                if (_creation_mode == enCreationMode.Retake)
+                {
+                    PrepareRetake();
+                    return;
+                }
+                return;
+            }
+
+            if (_mode == enMode.Update)
+            {
+
+                if (passed || locked)
+                {
+                    lbInfo.Visible = true;
+                    dtpDate.Enabled = false;
+                    btnSave.Enabled = false;
+                    return;
+                }
+            }
+
+            
+
+
+            
+        }
+
+        //---------------------------------------------------
+        // CREATE NEW
+        //---------------------------------------------------
+        private void CreateNewAppointment()
+        {
+            _creation_mode = enCreationMode.New;
+            _mode = enMode.Add;
+
+            _testApp = new clsTestAppointmentsBusinessLayer();
+
+            _testApp.LDLApplicationID = _ldlInfo.LDLApplicationID;
+            _testApp.TestTypeID = (byte)_test_type; 
+            _testApp.PaidFees = _ldlInfo.PaidFees;
+            _testApp.AppointmentDate = dtpDate.Value;
+            _testApp.IsLocked = false;
+            _testApp.CreatedByUserID = _currentUser.UserID;
+                
+        }
+
+        //---------------------------------------------------
+        // RETAKE
+        //---------------------------------------------------
+        private void PrepareRetake()
+        {
+            if (_mode == enMode.Update)
+            {
+                return;
+            }
+
+            
+            retakeTestInfo1.Enabled = true;
+
+            _oldApp = clsApplicationBusinessLayer
+                .GetApplicationByLDLAppID(_ldlInfo.LDLApplicationID);
+            _oldApp.ApplicationStatus = 2;
+
+            _retakeApp =
+                new clsApplicationBusinessLayer
+                {
+                    ApplicationPersonID = _oldApp.ApplicationPersonID,
+                    ApplicationStatus = 1,
+                    ApplicationDate = _oldApp.ApplicationDate,
+                    LastStatusDate = _oldApp.LastStatusDate,
+                    ApplicationTypeID = 8,
+                    PaidFees = _testApp.PaidFees,
+                    CreatedByUserID = _currentUser.UserID,
+
+                };
+
+            _retakeTestApp =
+                new clsTestAppointmentsBusinessLayer
+                {
+                    LDLApplicationID = _ldlInfo.LDLApplicationID,
+                    TestTypeID = _testApp.TestTypeID,
+                    CreatedByUserID = _currentUser.UserID,
+                    IsLocked = false,
+                    AppointmentDate = dtpDate.Value,
+                    PaidFees = _testApp.PaidFees
+                };
+
+            retakeTestInfo1
+                .setRtktestinfo(_retakeTestApp);
+        }
+
+        //---------------------------------------------------
+        // UI REFRESH
+        //---------------------------------------------------
+        private void RefreshUI()
+        {
+            if (_ldlInfo == null)
+            {
+                SetDefaultLabels();
+                return;
+            }
+
+            lbDLAppID.Text =
+                _ldlInfo.LDLApplicationID.ToString();
+
+            lbDClass.Text = _ldlInfo.ClassName;
+            lbName.Text = _ldlInfo.FullName;
+            lbFees.Text = _ldlInfo.PaidFees.ToString();
+            lbTrial.Text = _trial.ToString();
+
+            if (_testApp != null &&
+                _testApp.TestAppointmentID != -1)
+            {
+                dtpDate.Value =
+                    _testApp.AppointmentDate;
+            }
+        }
+
+        private void SetDefaultLabels()
+        {
+            lbDLAppID.Text = "[???]";
+            lbDClass.Text = "[???]";
+            lbName.Text = "[???]";
+            lbTrial.Text = "[???]";
+            lbFees.Text = "[???]";
+        }
+
+        //---------------------------------------------------
+        // SAVE
+        //---------------------------------------------------
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (_ldlInfo == null)
+                return;
+
+            if (AlreadyPassed())
+                return;
+
+            if (_creation_mode == enCreationMode.Retake)
+            {
+                HandleRetake();
+                SaveAppointment();
+                return;
+            }
+
+            if (_mode == enMode.Add)
+                CreateNewAppointment();
+
+
+            SaveAppointment();
+        }
+
+        //---------------------------------------------------
+        private bool AlreadyPassed()
+        {
+            if (clsTestsBusinessLayer
+                .IsTestPassed(
+                _testApp.TestAppointmentID, (byte)_testApp.TestTypeID))
+            {
+                MessageBox.Show("Already passed!");
+
+                CloseRequested?.Invoke(
+                    this,
+                    EventArgs.Empty);
+
+                return true;
+            }
+
+            return false;
+        }
+
+     
+        private void HandleRetake()
+        {
+
+            int classid = clsLicenseClassesbusinessLayer
+               .GetLicenseClassIDByName(
+                   _ldlInfo.ClassName);
+
+            _retakeApp.Save(classid);
+
+            var LDLAppToUpdate =
+                clsLocalLicenseApplicationBusinnessLayer
+                .GetLDLApplicationByAppID(
+                    _oldApp.ApplicationID);
+
+
+
+            LDLAppToUpdate.UpdateLocalLicesenseApplication
+                (_retakeApp.ApplicationID, classid);
+
+
+            _retakeTestApp.TestAppointmentID = -1;
+        }
+
+        private void PrepareAppointmentObject(clsTestAppointmentsBusinessLayer testapp)
+        {
+            // DO NOT touch app.LDLApplicationID here
+            // it was already correctly set before calling this method
+
+            if (_mode == enMode.Update)
+                testapp.TestAppointmentID = _testApp.TestAppointmentID;
+
+            testapp.TestTypeID = (byte)_test_type;
+
+            testapp.PaidFees =
+                _ldlInfo.PaidFees;
+
+            testapp.AppointmentDate =
+                dtpDate.Value;
+
+            testapp.IsLocked = false;
+
+            var user =
+                clsUserBusinessLayer
+                .GetUserByUserName(_ldlInfo.UserName);
+
+            testapp.CreatedByUserID =
+                user.UserID;
+        }
+
+        private void SaveAppointment()
+        {
+            clsTestAppointmentsBusinessLayer appToSave =
+                (_creation_mode == enCreationMode.Retake)
+                ? _retakeTestApp
+                : _testApp;
+
+            if (appToSave == null)
+            {
+                MessageBox.Show("No appointment to save!");
+                return;
+            }
+
+            PrepareAppointmentObject(appToSave);
+
+            if (appToSave.Save())
+            {
+                MessageBox.Show("Saved :)");
+                if (_creation_mode == enCreationMode.Retake)
+                {
+                    retakeTestInfo1
+                        .setRtktestinfo(appToSave);
+                }
+                CloseRequested?.Invoke(this, EventArgs.Empty);
             }
             else
             {
                 MessageBox.Show("Cant Save !!");
             }
+
+
         }
 
 
-
-
-
-
     }
-
-
-
-
-
-
-
-
 
 
 

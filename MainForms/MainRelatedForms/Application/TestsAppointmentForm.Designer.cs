@@ -1,6 +1,6 @@
 ﻿namespace DVLD.MainForms.MainRelatedForms.Application
 {
-    partial class VisionTestAppointment
+    partial class TestsAppointmentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,18 +31,18 @@
             this.components = new System.ComponentModel.Container();
             this.lbTitel = new System.Windows.Forms.Label();
             this.dgvAppontments = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.lbRecordNumbers = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.localLicenseApplicationDetails1 = new DVLD.MainForms.MainRelatedForms.Application.LocalLicenseApplicationDetails();
             this.btnADD = new System.Windows.Forms.Button();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.takeTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picboxMain = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppontments)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxMain)).BeginInit();
             this.SuspendLayout();
             // 
             // lbTitel
@@ -65,6 +65,14 @@
             this.dgvAppontments.Name = "dgvAppontments";
             this.dgvAppontments.Size = new System.Drawing.Size(708, 100);
             this.dgvAppontments.TabIndex = 3;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem,
+            this.takeTestToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(129, 64);
             // 
             // label1
             // 
@@ -96,14 +104,6 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "#Records :";
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editToolStripMenuItem,
-            this.takeTestToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(189, 86);
-            // 
             // localLicenseApplicationDetails1
             // 
             this.localLicenseApplicationDetails1.Location = new System.Drawing.Point(0, 111);
@@ -126,7 +126,7 @@
             this.editToolStripMenuItem.Image = global::DVLD.Properties.Resources.edit24;
             this.editToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(128, 30);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
@@ -135,21 +135,21 @@
             this.takeTestToolStripMenuItem.Image = global::DVLD.Properties.Resources.test_write24;
             this.takeTestToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.takeTestToolStripMenuItem.Name = "takeTestToolStripMenuItem";
-            this.takeTestToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
+            this.takeTestToolStripMenuItem.Size = new System.Drawing.Size(128, 30);
             this.takeTestToolStripMenuItem.Text = "Take Test";
             this.takeTestToolStripMenuItem.Click += new System.EventHandler(this.takeTestToolStripMenuItem_Click);
             // 
-            // pictureBox1
+            // picboxMain
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::DVLD.Properties.Resources.eye72;
-            this.pictureBox1.Location = new System.Drawing.Point(323, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 68);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.picboxMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picboxMain.Image = global::DVLD.Properties.Resources.eye72;
+            this.picboxMain.Location = new System.Drawing.Point(323, 3);
+            this.picboxMain.Name = "picboxMain";
+            this.picboxMain.Size = new System.Drawing.Size(70, 68);
+            this.picboxMain.TabIndex = 2;
+            this.picboxMain.TabStop = false;
             // 
-            // VisionTestAppointment
+            // TestsAppointmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -159,16 +159,16 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvAppontments);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picboxMain);
             this.Controls.Add(this.lbTitel);
             this.Controls.Add(this.localLicenseApplicationDetails1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "VisionTestAppointment";
+            this.Name = "TestsAppointmentForm";
             this.Text = "VisionTestAppointment";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppontments)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxMain)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,7 +178,7 @@
 
         private LocalLicenseApplicationDetails localLicenseApplicationDetails1;
         private System.Windows.Forms.Label lbTitel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picboxMain;
         private System.Windows.Forms.DataGridView dgvAppontments;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbRecordNumbers;
