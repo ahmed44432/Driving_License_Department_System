@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "DataAccessLayer": {
+      "commandName": "Project",
+      "nativeDebugging": true,
+      "sqlDebugging": true
+    }
+  }
+}

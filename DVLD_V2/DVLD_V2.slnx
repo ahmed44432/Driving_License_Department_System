@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../BusinessLayer/BusinessLayer.csproj" />
+  <Project Path="../DataAccessLayer/DataAccessLayer.csproj" />
+  <Project Path="../TestConsole/TestConsole.csproj" Id="4ad55768-9d5c-4779-a07e-47baeea26575" />
+  <Project Path="DVLD.csproj" />
+</Solution>
