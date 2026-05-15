@@ -26,7 +26,8 @@ packages/
 # WebView2
 *.WebView2/
 
-# Test & Extra Folders
+# TestConsole Folder
+TestConsole/
 TestConsole/bin/
 TestConsole/obj/
 
