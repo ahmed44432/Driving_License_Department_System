@@ -147,7 +147,7 @@ public class clsPeopleBusinessLayer
         string imagePath = "";
         int nationalityCountryID = 0;
 
-        nif (clsPeopleDataAccessLayer.GetPersonByID(id, ref nationalNumber, ref firstName,
+        if (clsPeopleDataAccessLayer.GetPersonByID(id, ref nationalNumber, ref firstName,
             ref secondName, ref thirdName, ref lastName, ref dateOfBirth, ref gender,
             ref address, ref email, ref phone, ref imagePath, ref nationalityCountryID))
         {

@@ -445,7 +445,8 @@ public class clsPeopleDataAccessLayer
 
                 lastName = (string)sqlDataReader["LastName"];
                 dateOfBirth = (DateTime)sqlDataReader["DateOfBirth"];
-                gender = (char)sqlDataReader["Gender"];
+                gender = Convert.ToChar(sqlDataReader["Gendor"]);
+
                 address = (string)sqlDataReader["Address"];
                 if (sqlDataReader["Email"] != DBNull.Value)
                 {

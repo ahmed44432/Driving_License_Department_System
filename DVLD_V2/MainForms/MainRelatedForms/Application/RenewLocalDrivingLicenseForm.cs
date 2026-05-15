@@ -26,18 +26,19 @@ namespace DVLD.MainForms.MainRelatedForms.Application
         {
             _license = license;
             if (_license == null || _license.DriverID == -1) { _DefLabels(); return; }
-            if ( _license.IsActive == false)
+            if (_license.IsActive == false)
             {
                 MessageBox.Show(@"The license is  inactive !! EX : " + _license.ExpirationDate.ToString("d")
                     , "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnSave.Enabled = false;
             }
-            else if (_license.ExpirationDate > DateTime.Now )
+            else if (_license.ExpirationDate > DateTime.Now)
             {
                 MessageBox.Show(@"The license is still active untill " + _license.ExpirationDate.ToString("d")
                     , "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnSave.Enabled = false;
-            }else
+            }
+            else
             { btnSave.Enabled = true; }
             lbOldLicenseID.Text = _license.LicenseID.ToString();
             lbLicenseFees.Text = _license.PaidFees.ToString();
@@ -47,7 +48,7 @@ namespace DVLD.MainForms.MainRelatedForms.Application
             int.TryParse(lbLicenseFees.Text, out licenseFees);
             total_fees = (appFees + licenseFees);
             lbTotalFees.Text = total_fees.ToString();
-            
+
         }
 
         private void _DefLabels()
@@ -70,7 +71,7 @@ namespace DVLD.MainForms.MainRelatedForms.Application
 
         private void _PrepareApplicationObj()
         {
-            clsPeopleBusinessLayer person = clsPeopleBusinessLayer.
+            clsPeopleBusinessLayer ?person = clsPeopleBusinessLayer.
                 GetPersonByApplicationID(_license.ApplicationID);
             _application = new clsApplicationBusinessLayer();
             _application.ApplicationPersonID = person.ID;
@@ -165,7 +166,7 @@ namespace DVLD.MainForms.MainRelatedForms.Application
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            clsPeopleBusinessLayer tmp_person =
+            clsPeopleBusinessLayer ?tmp_person =
                 clsPeopleBusinessLayer.
                 GetPersonByApplicationID(_license.ApplicationID);
 
@@ -191,6 +192,8 @@ namespace DVLD.MainForms.MainRelatedForms.Application
                 driverLicenseInfo.ShowDialog();
             }
         }
+
+      
     }
 
 

@@ -2,6 +2,7 @@
 using System.IO;
 using System.Security.Cryptography;
 using System.Windows.Forms;
+using Microsoft.Win32;
 using BusinessLayer;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -28,7 +29,7 @@ namespace DVLD
 
         private void LoginScreen_Load(object sender, EventArgs e)
         {
-            Return_Recourd(File_path);
+            Return_Recourd_from_Registry();
         }
 
         private void lnbMoreInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -38,9 +39,12 @@ namespace DVLD
 
         }
 
-        string File_path = @"C:\Users\Ahmed\Desktop\DVLD\DVLD_V2\UsersFastLogin";
+        //string File_path = @"C:\Users\Ahmed\Desktop\DVLD\DVLD_V2\UsersFastLogin";
+        string keyPath = @"HKEY_CURRENT_USER\SOFTWARE\DVLD_UsersFastLogin";
+
 
         string line;
+        string valueName = "UserInfo";
         int key = 5;
 
 
@@ -79,7 +83,7 @@ namespace DVLD
             line = string.Empty;
         }
 
-        private void Return_Recourd(string path)
+        private void Return_Recourd_from_File(string path)
         {
             //File.Decrypt(path);
             
@@ -91,6 +95,49 @@ namespace DVLD
 
             txbUN.Text = DecryptWord(info[0],key);
             txbPS.Text = DecryptWord(info[1], key);
+        }
+
+
+        private void AddRecourdToRegistry(string UN, string PS)
+        {
+            UN = EncryptWord(UN, key);
+            PS = EncryptWord(PS, key);
+            line = UN + "##" + PS;
+
+            try
+            {
+                // Write the value to the Registry
+                Registry.SetValue(keyPath, valueName, line, RegistryValueKind.String);
+               
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+        }
+
+        private void Return_Recourd_from_Registry()
+        {
+            
+
+            try
+            {
+                // Read the value from the Registry
+                line = Registry.GetValue(keyPath, valueName, null) as string;
+
+                if (line == string.Empty) { return; }
+
+                string[] info = new string[2];
+                info = line.Split(new string[] { "##" }, StringSplitOptions.None);
+
+                txbUN.Text = DecryptWord(info[0], key);
+                txbPS.Text = DecryptWord(info[1], key);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
         }
 
 
@@ -118,12 +165,13 @@ namespace DVLD
 
                     if (chkRM.Checked)
                     {
-                        File.WriteAllText(File_path, string.Empty);
-                        AddRecourd_InFile(File_path, txbUN.Text, txbPS.Text);
+                        //File.WriteAllText(File_path, string.Empty);
+                        //AddRecourd_InFile(File_path, txbUN.Text, txbPS.Text);
+                        AddRecourdToRegistry(txbUN.Text, txbPS.Text);
                     }
                     else
                     {
-                        File.WriteAllText(File_path, string.Empty);
+                        AddRecourdToRegistry("","");
                     }
 
                     this.DialogResult = DialogResult.OK;
